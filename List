@@ -6,3 +6,20 @@ List<int> doubledNumbers2 = filter<int>(isEven,numbers);
 final doubledNumbers3 = map<int>(doubleit,numbers);
 
 }
+
+
+num add(int a, int b) {
+  return a + b;
+}
+
+num subtract(int a, int b) {
+  return a - b;
+}
+
+num multiply(int a, int b) {
+  return a * b;
+}
+
+num divide(int a, int b) {
+  return a / b;
+}
