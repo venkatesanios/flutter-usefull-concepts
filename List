@@ -66,5 +66,38 @@ class Test {
    } 
 }
 
+//Getter seter
+void main() {
+  Math math = Math();
 
+  print(math.cm);
+  math.cm = 14;
+  print(math.cm);
+}
+
+class Math {
+  double _cm = 15.0;
+
+  double get cm => _cm;
+
+  set cm(double cm1) {
+    _cm = cm1;
+  }
+}
+
+
+//abstract
+
+void main() {
+  
+  print(Math.a+Math.b);
+}
+
+
+abstract class Math{
+  
+  static final a = 20;
+  static final b = 14;
+  
+}
 
