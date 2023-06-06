@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+class SpeakText {
+  FlutterTts flutterTts = FlutterTts();
+  Future<dynamic> speak(String text) async {
+  //Language
+    await flutterTts.setLanguage('en-US');
+    //modulation of voice 0.1 -10
+    await flutterTts.setSpeechRate(0.5);
+    //speed of voice 0.1 -10
+    await flutterTts.setPitch(0.2);
+    await flutterTts.speak(text);
+  }
+}
+
+
+
+//Use to another class 
+//create object or instance
+  SpeakText speaktovoice = SpeakText();
+  //values assing 
+   speaktovoice.speak('Security credentials not available');
