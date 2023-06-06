@@ -23,3 +23,48 @@ num multiply(int a, int b) {
 num divide(int a, int b) {
   return a / b;
 }
+
+//List of int value sum in singe value
+void main() { 
+   Test c = Test(); 
+ c.test1([1,2,2,3,4,4,5,5,6,7]);
+ // print(c);
+} 
+class Test { 
+    void test1(List<int> name) { 
+     // var f = name.sum; 
+        
+          int d = name.reduce((value, element) => value + element ?? 0);
+
+      print(d);
+     // return f;
+   } 
+   
+   // List Sting values add in single string
+   void main() { 
+   Test c = Test(); 
+ String v = c.test1(['V','e','n','k','a','t','e','s','a','n']);
+  print('my name is $v');
+} 
+class Test { 
+    String test1(List<String> name) { 
+      var f = name.join(''); 
+       return f;
+   } 
+}
+//Single string into List of String
+void main() { 
+   Test c = Test(); 
+ List<String> v = c.test1('Venkatesan');
+  print('my name is $v');
+} 
+class Test { 
+    List<String> test1(String name) { 
+      var f = name.split(''); 
+    
+       return f;
+   } 
+}
+
+
+
