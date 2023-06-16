@@ -1,0 +1,320 @@
+Camera: Access to the device's camera for capturing photos and videos.
+
+Photo Library: Access to the device's photo library to view and manage photos and videos.
+
+Microphone: Access to the device's microphone for recording audio.
+
+Location: Access to the device's GPS and location services for obtaining the user's current location.
+
+Contacts: Access to the device's address book and contact information.
+
+Calendar: Access to the device's calendar for creating, editing, and managing events.
+
+Reminders: Access to the device's reminders and to-do lists.
+
+Notifications: Access to send push notifications to the user's device.
+
+Health: Access to the device's health data, such as steps, heart rate, and fitness information.
+
+Motion & Fitness: Access to motion and fitness data collected by the device's sensors.
+
+Bluetooth: Access to the device's Bluetooth functionality for connecting to other devices.
+
+HomeKit: Access to control and interact with HomeKit-enabled smart home devices.
+
+Music Library: Access to the device's music library for playing audio files.
+
+Apple Music: Access to the user's Apple Music account for streaming music.
+
+Siri: Access to Siri voice commands and interactions.
+
+Speech Recognition: Access to speech recognition for converting spoken words to text.
+
+Face ID/Touch ID: Access to the device's biometric authentication methods for secure login.
+
+Cellular Data: Access to cellular network data for network-related operations.
+
+Wi-Fi Networking: Access to Wi-Fi network information for network-related operations.
+
+Background App Refresh: Access to update content in the background when the app is not active.
+
+Background Location: Access to obtain the user's location in the background.
+
+Apple Pay: Access to process payments using Apple Pay.
+
+NFC: Access to Near Field Communication for reading NFC tags and interacting with compatible devices.
+
+Speech Synthesis: Access to text-to-speech functionality for generating spoken audio.
+
+Apple Push Notification service (APNs): Access to send and receive push notifications via the Apple Push Notification service.
+
+SiriKit: Access to integrate with Siri and handle specific app-related tasks using voice commands.
+
+HomeKit Accessory: Access to control and interact with specific HomeKit accessories, such as lights, thermostats, door locks, etc.
+
+Intents: Access to handle SiriKit intents, allowing your app to interact with system-level intents and provide relevant responses.
+
+User Notifications: Access to manage and display user notifications on the device.
+
+Speech Recognition Streaming: Access to real-time streaming of speech recognition results.
+
+Background Fetch: Access to periodically fetch data from the network or perform background tasks at specified intervals.
+
+VPN: Access to configure and manage Virtual Private Network settings.
+
+Hotspot Configuration: Access to configure and manage Personal Hotspot settings.
+
+CallKit: Access to integrate your app with the device's Phone app for handling VoIP calls.
+
+Health Records: Access to read and write health record data in the Health app.
+
+Network Extensions: Access to customize and extend network functionality, such as implementing VPN protocols or packet filters.
+
+Siri Event Suggestions: Access to provide app-related events and suggestions in the Siri interface.
+
+TV Provider: Access to authenticate the user with their TV provider for accessing streaming content.
+
+NFC Tag Reading: Access to read NFC tags and interact with compatible devices.
+
+Core NFC: Access to perform basic NFC operations, such as reading NFC tags and interacting with compatible devices.
+
+Apple Music: Access to the user's Apple Music library, allowing playback and management of music content.
+
+NFC Tag Writing: Access to write data to NFC tags.
+
+Music Catalog Playback: Access to stream music content from the Apple Music catalog.
+
+ClassKit: Access to integrate with Apple's educational framework for creating and managing educational content.
+
+Network Usage Rules: Access to monitor and control the network usage of your app.
+
+User Enrollment: Access to manage user enrollment in mobile device management (MDM) systems.
+
+Data Protection: Access to manage data protection settings and encryption for app data.
+
+Wireless Accessory Configuration: Access to configure and interact with wireless accessories using the Home app.
+
+Personal VPN: Access to configure and manage Personal VPN settings.
+
+Managed App Configuration: Access to receive managed app configuration data from an MDM system.
+
+CoreMotion: Access to motion and activity data from the device's sensors.
+
+Intents UI: Access to customize the UI for SiriKit intents.
+
+CoreLocation Always and When In Use Usage: Access to the device's location data, either always or when the app is in use.
+
+Network Extension VPN Subdomains: Access to configure VPN settings for specific domains.
+
+Automatic Time Zone: Access to automatically update the device's time zone based on location.
+
+FaceID: Access to authenticate the user's identity using Face ID.
+
+Critical Alerts: Access to display critical alerts that bypass Do Not Disturb settings.
+
+CoreBluetooth Peripheral: Access to create Bluetooth Low Energy peripheral devices.
+
+CoreBluetooth Central: Access to scan for and connect to Bluetooth Low Energy devices.
+
+Siri Media Intent: Access to handle media-related intents for SiriKit.
+
+Siri Shortcuts: Access to create and manage Siri shortcuts for your app.
+
+CoreML Models: Access to use Core ML machine learning models in your app.
+
+CallKit: Access to integrate your app with the phone app, enabling features such as VoIP calling and call blocking.
+
+Health Records: Access to read and write health records from the Health app.
+
+Network Extension: Access to create and manage custom network extensions for VPNs, proxies, and other network-related services.
+
+SiriKit: Access to integrate your app with Siri, allowing users to perform tasks using voice commands.
+
+ARKit: Access to use augmented reality features and capabilities in your app.
+
+Vision: Access to use computer vision and image analysis features in your app.
+
+Speech Recognition: Access to perform speech recognition and convert speech to text in your app.
+
+Background Modes: Access to run specific tasks in the background, such as location updates, audio playback, and remote notifications.
+
+In-App Purchases: Access to implement in-app purchases and monetization features in your app.
+
+User Notifications: Access to display notifications to the user, including banners, alerts, and badges.
+
+Push Notifications: Access to send push notifications to the user's device.
+
+HealthKit: Access to read and write health and fitness data from the Health app.
+
+HomeKit: Access to control and interact with smart home devices and accessories.
+
+Core NFC: Access to read Near Field Communication (NFC) tags in your app.
+
+Game Center: Access to integrate your app with Game Center for multiplayer gaming and leaderboards.
+
+CloudKit: Access to store and sync data with iCloud using the CloudKit framework.
+
+Core Data: Access to manage persistent data storage using the Core Data framework.
+
+Core Location When In Use Usage: Access to the device's location data when your app is in use.
+
+Core Location Always Usage: Access to the device's location data even when your app is in the background.
+
+Core Motion: Access to motion and fitness data from the device's sensors, such as accelerometer and gyroscope.
+
+Core Bluetooth: Access to communicate with Bluetooth devices and peripherals.
+
+Core Telephony: Access to information about the device's cellular network and phone capabilities.
+
+Media Library: Access to the user's media library, including music, videos, and photos.
+
+Photo Library: Access to the user's photo library and the ability to save photos or videos.
+
+Camera: Access to the device's camera for capturing photos or videos.
+
+Microphone: Access to the device's microphone for recording audio.
+
+Contacts: Access to the user's contacts and address book.
+
+EventKit: Access to the user's calendar events and reminders.
+
+Motion Fitness: Access to the user's fitness and activity data, such as steps taken and distance traveled.
+
+Speech Synthesis: Access to convert text to speech and play it through the device's speakers.
+
+Network Usage: Access to monitor the app's network usage and data transfer.
+
+VPN Configuration: Access to configure and manage Virtual Private Network (VPN) settings.
+
+App Extension: Access to integrate app extensions, such as widgets and custom keyboards, with your app.
+
+File Access: Access to read and write files on the device's storage.
+
+Background Fetch: Access to perform periodic background fetches to update app content.
+
+Wireless Accessory Configuration: Access to configure and manage wireless accessories connected to the device.
+
+Network Connectivity: Access to monitor and determine the device's network connectivity status.
+
+NFC Tag Reading: Access to read NFC tags and interact with NFC-enabled objects.
+
+SiriKit: Access to integrate your app with Siri and handle voice commands.
+
+HealthKit: Access to the user's health and fitness data, such as heart rate, workouts, and nutrition.
+
+HomeKit: Access to control and interact with smart home devices, such as lights, thermostats, and locks.
+
+User Notifications: Access to display notifications and manage notification settings for your app.
+
+Speech Recognition: Access to convert spoken words into text.
+
+Background Modes: Access to perform tasks in the background, such as audio playback, location updates, and VoIP calls.
+
+App Tracking Transparency: Access to request user consent for tracking across apps and websites.
+
+Face ID: Access to authenticate the user's identity using Face ID facial recognition.
+
+Touch ID: Access to authenticate the user's identity using Touch ID fingerprint recognition.
+
+Quick Look: Access to preview documents, images, and other files within your app.
+
+ARKit: Access to augmented reality features and capabilities.
+
+Push Notifications: Access to send push notifications to the user's device.
+
+Wallet: Access to manage passes, tickets, and payment cards in the user's Apple Wallet.
+
+Apple Pay: Access to process payments using Apple Pay.
+
+CallKit: Access to integrate with the device's Phone app and handle incoming and outgoing calls.
+
+Speech Recognition: Access to convert spoken words into text.
+
+Background Transfer Service: Access to perform background transfers of large files or data.
+
+Personal VPN: Access to configure and manage Personal VPN settings.
+
+Music Library: Access to the user's music library and playback controls.
+
+Intents: Access to handle app interactions through Siri shortcuts and suggested actions.
+
+Core Motion: Access to motion and fitness data, including accelerometer and gyroscope readings.
+
+Core Bluetooth: Access to communicate with Bluetooth devices, such as fitness trackers or smartwatches.
+
+Core Location: Access to the device's location information, including GPS coordinates and geolocation services.
+
+Core NFC: Access to interact with Near Field Communication (NFC) tags and devices.
+
+Core Telephony: Access to information about the device's cellular network and telephony capabilities.
+
+Media Library: Access to the user's media library, including music, videos, and photos.
+
+Core Data: Access to a persistent storage mechanism for managing and storing app data.
+
+Contacts: Access to the user's contact information, such as phone numbers, email addresses, and social profiles.
+
+EventKit: Access to the user's calendar and event data.
+
+Photos: Access to the user's photo library and the ability to save and retrieve photos and videos.
+
+Camera: Access to the device's camera for capturing photos and videos.
+
+Microphone: Access to the device's microphone for recording audio.
+
+
+Speech: Access to speech recognition and synthesis capabilities.
+
+Media Capture: Access to capture media, including audio and video, using the device's camera and microphone.
+
+User Activity: Access to track and manage user activity within your app.
+
+Network Extensions: Access to create network extensions to customize network functionality.
+
+VPN Extensions: Access to create VPN (Virtual Private Network) extensions to manage network traffic.
+
+Siri Event Suggestions: Access to suggest relevant app features and content based on the user's Siri interactions.
+
+Siri Media Suggestions: Access to provide media recommendations to the user based on their Siri interactions.
+
+Siri Intents Donations: Access to donate app-specific intents to Siri for personalized suggestions.
+
+HealthKit: Access to the user's health and fitness data, including activity, workouts, and health records.
+
+HomeKit: Access to control and interact with smart home devices.
+
+Speech Recognition: Access to speech recognition capabilities for converting speech to text.
+
+Apple Pay: Access to process payments using Apple Pay.
+
+Network Usage: Access to monitor and manage the app's network usage.
+
+Background Fetch: Access to periodically fetch and update content in the background.
+
+Background Processing: Access to perform tasks in the background, such as downloading or uploading data.
+
+Push Notifications: Access to send and receive push notifications.
+
+App Groups: Access to share data between apps within an app group container.
+
+App Analytics: Access to collect analytics data about app usage and performance.
+
+Health Records: Access to the user's health records stored in the Health app.
+
+Intents: Access to handle SiriKit intents for specific domains, such as messaging, ride booking, or photo editing.
+
+Music Library: Access to the user's music library, including playlists, songs, and albums.
+
+Speech Synthesis: Access to speech synthesis capabilities for converting text to speech.
+
+Voice Over IP: Access to make and receive voice calls over the internet.
+
+CarPlay: Access to integrate the app with CarPlay, Apple's in-car entertainment system.
+
+SiriKit: Access to integrate the app with Siri and handle app-specific voice commands.
+
+User Notifications: Access to display and manage user notifications.
+
+Wallet: Access to manage passes, tickets, and payment cards in the user's digital wallet.
+
+Network Authentication: Access to authenticate and connect to network services.
