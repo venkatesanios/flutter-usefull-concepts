@@ -1,0 +1,397 @@
+
+CAMERA: Allows access to the device's camera for capturing photos and videos.
+
+READ_CONTACTS: Grants access to read the user's contacts stored on the device.
+
+WRITE_CONTACTS: Allows the app to modify or add new contacts to the user's address book.
+
+ACCESS_FINE_LOCATION: Enables access to precise GPS location information.
+
+ACCESS_COARSE_LOCATION: Allows access to approximate network-based location information.
+
+RECORD_AUDIO: Grants permission to record audio using the device's microphone.
+
+READ_PHONE_STATE: Allows reading the phone's current state and information, including the phone number, cellular network information, and status.
+
+CALL_PHONE: Allows the app to initiate phone calls without user interaction.
+
+READ_SMS: Grants access to read SMS messages on the device.
+
+SEND_SMS: Allows the app to send SMS messages.
+
+READ_EXTERNAL_STORAGE: Enables reading data from the device's external storage (e.g., SD card)
+.
+WRITE_EXTERNAL_STORAGE: Allows writing data to the device's external storage.
+
+INTERNET: Grants access to network communication.
+
+ACCESS_NETWORK_STATE: Allows the app to access information about the device's network connectivity status.
+
+RECEIVE_BOOT_COMPLETED: Allows the app to start automatically after the device boots up.
+
+VIBRATE: Enables the app to control device vibration.
+
+WAKE_LOCK: Allows the app to keep the device awake while running.
+
+NFC: Grants access to Near Field Communication features.
+
+BLUETOOTH: Allows the app to connect to Bluetooth devices and perform related actions.
+
+USE_FINGERPRINT: Enables fingerprint authentication for the app.
+
+GET_ACCOUNTS: Allows access to the list of accounts associated with the device.
+
+WRITE_SETTINGS: Allows the app to modify system settings.
+
+READ_CALENDAR: Allows reading events and reminders from the device's calendar.
+
+WRITE_CALENDAR: Allows adding, modifying, or deleting events and reminders in the device's calendar.
+
+READ_CALL_LOG: Grants access to read the call history log on the device.
+
+WRITE_CALL_LOG: Allows modifying or deleting call history entries.
+
+READ_EXTERNAL_STORAGE: Allows reading data from the device's shared external storage (e.g., media files).
+
+WRITE_EXTERNAL_STORAGE: Allows writing data to the device's shared external storage.
+
+ACCESS_NOTIFICATION_POLICY: Grants access to the Do Not Disturb policy control.
+
+ACCESS_WIFI_STATE: Allows the app to access information about Wi-Fi networks.
+
+CHANGE_WIFI_STATE: Enables the app to change Wi-Fi connectivity state.
+
+ACCESS_WIMAX_STATE: Grants access to information about WiMAX networks (deprecated in newer Android versions).
+
+CHANGE_WIMAX_STATE: Allows changing the WiMAX connectivity state (deprecated in newer Android versions).
+
+READ_CELL_BROADCASTS: Grants access to read cell broadcast messages.
+
+SEND_RESPOND_VIA_MESSAGE: Allows responding to incoming phone calls by sending an SMS message.
+
+READ_PHONE_NUMBERS: Grants access to read the phone numbers stored on the device.
+
+ANSWER_PHONE_CALLS: Allows the app to answer incoming phone calls programmatically.
+
+READ_VOICEMAIL: Grants access to read voicemail messages on the device.
+
+WRITE_VOICEMAIL: Allows modifying or deleting voicemail messages.
+
+BODY_SENSORS: Grants access to various sensors on the device, such as heart rate monitors or step counters.
+
+READ_SMS: Allows access to read SMS messages on the device.
+
+RECEIVE_SMS: Enables the app to receive SMS messages.
+
+RECEIVE_MMS: Allows receiving MMS messages.
+
+RECEIVE_WAP_PUSH: Grants access to receive WAP push messages.
+
+SEND_SMS: Allows the app to send SMS messages.
+
+READ_CELL_BROADCASTS: Grants access to read cell broadcast messages.
+
+INSTALL_PACKAGES: Allows the app to install packages programmatically.
+
+DELETE_PACKAGES: Enables the app to delete packages programmatically.
+
+ACCESS_DOWNLOAD_MANAGER: Grants access to the system's download manager.
+
+ACCESS_DOWNLOAD_MANAGER_ADVANCED: Allows advanced access to the download manager.
+
+READ_PROFILE: Allows reading the user's profile data.
+
+WRITE_PROFILE: Allows modifying the user's profile data.
+
+READ_SOCIAL_STREAM: Grants access to read from the user's social stream.
+
+WRITE_SOCIAL_STREAM: Allows writing to the user's social stream.
+
+READ_USER_DICTIONARY: Grants access to read the user's dictionary.
+
+WRITE_USER_DICTIONARY: Allows modifying the user's dictionary.
+
+ACCESS_LOCATION_EXTRA_COMMANDS: Enables access to additional location commands.
+
+ACCESS_NETWORK_STATE: Allows the app to access information about networks.
+
+ACCESS_SURFACE_FLINGER: Grants low-level access to the SurfaceFlinger service.
+
+ACCESS_WIFI_LOCK: Allows the app to access Wi-Fi Multicast mode.
+
+ACCOUNT_MANAGER: Grants access to the Account Manager service.
+
+AUTHENTICATE_ACCOUNTS: Allows authenticating accounts.
+
+BIND_ACCESSIBILITY_SERVICE: Enables an accessibility service to bind to its clients.
+
+BIND_APPWIDGET: Allows the app to bind to third-party widget providers.
+
+BIND_CARRIER_SERVICES: Grants access to bind to carrier provisioning services.
+
+BIND_DEVICE_ADMIN: Enables the app to interact with device administration.
+
+BIND_DREAM_SERVICE: Allows the app to bind to dream (screen saver) services.
+
+BIND_INCALL_SERVICE: Grants access to bind to an incoming call service.
+
+BIND_INPUT_METHOD: Enables the app to bind to an input method.
+
+BIND_MIDI_DEVICE_SERVICE: Allows the app to bind to a MIDI device service.
+
+BIND_NFC_SERVICE: Grants access to bind to an NFC service.
+
+BIND_NOTIFICATION_LISTENER_SERVICE: Enables an app to bind to the notification listener service.
+
+BIND_PRINT_SERVICE: Allows the app to bind to a print service.
+
+BIND_QUICK_SETTINGS_TILE: Grants access to bind to a quick settings tile.
+
+BIND_REMOTEVIEWS: Enables the app to bind to a remote views service.
+
+
+BIND_SCREENING_SERVICE: Allows the app to bind to a call screening service.
+
+BIND_TELECOM_CONNECTION_SERVICE: Grants access to bind to a telecom connection service.
+
+BIND_TEXT_SERVICE: Enables the app to bind to a text service.
+
+BIND_TV_INPUT: Allows the app to bind to a TV input provider.
+
+BIND_VISUAL_VOICEMAIL_SERVICE: Grants access to bind to a visual voicemail service.
+
+BIND_VOICE_INTERACTION: Enables the app to bind to a voice interaction service.
+
+BIND_VPN_SERVICE: Allows the app to bind to a VPN service.
+
+BIND_VR_LISTENER_SERVICE: Grants access to bind to a VR listener service.
+
+BIND_WALLPAPER: Enables the app to bind to a live wallpaper.
+
+BLUETOOTH: Allows the app to connect to paired Bluetooth devices.
+
+BLUETOOTH_ADMIN: Grants administrative access to Bluetooth operations.
+
+BLUETOOTH_PRIVILEGED: Allows the app to pair with remote Bluetooth devices without user interaction.
+
+BODY_SENSORS: Grants access to the user's body sensors such as heart rate sensors.
+
+BROADCAST_PACKAGE_REMOVED: Enables the app to broadcast when a package is removed.
+
+BROADCAST_SMS: Allows the app to broadcast SMS messages received.
+
+BROADCAST_STICKY: Grants permission to send sticky broadcasts.
+
+BROADCAST_WAP_PUSH: Allows the app to broadcast WAP push messages received.
+
+CALL_PHONE: Allows the app to initiate a phone call without going through the Dialer user interface.
+
+CALL_PRIVILEGED: Grants privileged access to call functionality.
+
+CAMERA: Enables the app to access the device's camera.
+
+CAPTURE_AUDIO_OUTPUT: Allows the app to capture audio output.
+
+CAPTURE_SECURE_VIDEO_OUTPUT: Grants access to capture secure video output.
+
+CAPTURE_VIDEO_OUTPUT: Allows the app to capture video output.
+
+CHANGE_COMPONENT_ENABLED_STATE: Enables changing the enabled state of a component.
+
+CHANGE_CONFIGURATION: Allows the app to change the device's configuration settings.
+
+CHANGE_NETWORK_STATE: Allows the app to change the state of network connectivity.
+
+CHANGE_WIFI_MULTICAST_STATE: Enables the app to enter/exit Wi-Fi multicast mode.
+
+CHANGE_WIFI_STATE: Allows the app to connect and disconnect from Wi-Fi networks and make changes to Wi-Fi settings.
+
+CLEAR_APP_CACHE: Grants permission to clear the app's cache.
+
+CONTROL_LOCATION_UPDATES: Allows the app to control whether location updates should be enabled or disabled.
+
+DELETE_CACHE_FILES: Enables the app to delete cache files.
+
+DELETE_PACKAGES: Allows the app to delete packages.
+
+DIAGNOSTIC: Grants access to diagnostic tools such as the ability to read and write diagnostic resources.
+
+DISABLE_KEYGUARD: Allows the app to disable the keyguard and prevent it from being displayed.
+
+DUMP: Enables the app to retrieve system internal state for diagnostic purposes.
+
+EXPAND_STATUS_BAR: Allows the app to expand or collapse the status bar.
+
+FACTORY_TEST: Grants permission to run factory test code.
+
+GET_ACCOUNTS: Allows the app to access the list of accounts in the Accounts Service.
+
+GET_ACCOUNTS_PRIVILEGED: Provides privileged access to the list of accounts in the Accounts Service.
+
+GET_PACKAGE_SIZE: Enables the app to retrieve the size of any installed package.
+
+GET_TASKS: Allows the app to retrieve information about currently and recently running tasks.
+
+GLOBAL_SEARCH: Enables the app to initiate a global search query.
+
+INSTALL_LOCATION_PROVIDER: Allows the app to install a location provider.
+
+INSTALL_PACKAGES: Grants permission to install packages.
+
+INSTALL_SHORTCUT: Enables the app to install a shortcut in Launcher.
+INTERACT_ACROSS_USERS: Allows the app to interact across different users on the device.
+
+INTERACT_ACROSS_USERS_FULL: Grants full permission to interact across different users on the device.
+
+INTERNET: Allows the app to access the Internet.
+
+KILL_BACKGROUND_PROCESSES: Enables the app to terminate background processes.
+
+MANAGE_ACCOUNTS: Grants permission to manage the list of accounts in the Accounts Service.
+
+MANAGE_APP_TOKENS: Allows the app to manage (create, destroy, Z-order) application tokens in the window manager.
+
+MANAGE_DOCUMENTS: Enables the app to manage document access permissions.
+
+MASTER_CLEAR: Allows the app to perform a factory reset on the device.
+
+MODIFY_AUDIO_SETTINGS: Grants permission to modify global audio settings.
+
+MODIFY_PHONE_STATE: Allows modification of the telephony state, such as powering on/off the radio, initiating calls, etc.
+
+MOUNT_FORMAT_FILESYSTEMS: Enables the app to format removable storage.
+
+MOUNT_UNMOUNT_FILESYSTEMS: Allows the app to mount and unmount file systems for removable storage.
+
+NFC: Allows the app to communicate with NFC (Near Field Communication) tags, cards, and readers.
+
+PACKAGE_USAGE_STATS: Grants access to the user's usage history and statistics of their interactions with installed apps.
+
+PERSISTENT_ACTIVITY: Allows the app to make its activities persistent, so they are not affected by later activity stack operations.
+
+PROCESS_OUTGOING_CALLS: Enables monitoring, modifying, or preventing outgoing calls.
+
+READ_CALENDAR: Allows the app to read the user's calendar data.
+
+READ_CALL_LOG: Grants permission to read the user's call log.
+
+READ_CONTACTS: Allows the app to read the user's contacts data.
+
+READ_EXTERNAL_STORAGE: Enables the app to read from external storage, such as SD cards.
+READ_FRAME_BUFFER: Allows the app to read the content of the framebuffer.
+
+READ_INPUT_STATE: Grants permission to read the current state of all input devices.
+
+READ_LOGS: Enables the app to read the device's log files.
+
+READ_PHONE_NUMBERS: Allows the app to read phone numbers stored on the device.
+
+READ_PHONE_STATE: Grants permission to read the phone state, including the phone number, current cellular network information, the status of any ongoing calls, and a list of any PhoneAccounts registered on the device.
+
+READ_SMS: Allows the app to read SMS messages stored on the device or SIM card.
+
+READ_SYNC_SETTINGS: Grants permission to read the sync settings for an account.
+
+READ_SYNC_STATS: Allows the app to read the sync statistics for an account.
+
+READ_VOICEMAIL: Enables the app to read voicemails in the system.
+
+REBOOT: Allows the app to reboot the device.
+
+RECEIVE_BOOT_COMPLETED: Grants permission to receive the boot completed notification that is broadcast after the system finishes booting.
+
+RECEIVE_MMS: Enables the app to receive MMS messages.
+
+RECEIVE_SMS: Allows the app to receive SMS messages.
+
+RECEIVE_WAP_PUSH: Grants permission to receive WAP push messages.
+
+RECORD_AUDIO: Allows the app to record audio using the device's microphone.
+
+REORDER_TASKS: Enables the app to reorder tasks displayed in the recent tasks list.
+
+REQUEST_IGNORE_BATTERY_OPTIMIZATIONS: Grants permission to request the device to exempt the app from battery optimization.
+
+REQUEST_INSTALL_PACKAGES: Allows the app to request installation packages from sources other than the Play Store.
+
+RESTART_PACKAGES: Enables the app to restart other apps.
+
+SEND_RESPOND_VIA_MESSAGE: Allows the app to send a response to an incoming call by SMS.
+SEND_SMS: Allows the app to send SMS messages.
+
+SET_ALARM: Enables the app to set an alarm in the alarm clock application.
+
+SET_ALWAYS_FINISH: Grants permission to control whether activities are immediately finished when the user navigates away from them.
+
+SET_ANIMATION_SCALE: Allows the app to set the global animation scaling factor.
+
+SET_DEBUG_APP: Grants permission to enable/disable application debugging.
+
+SET_PREFERRED_APPLICATIONS: Enables the app to set the preferred applications that are shown to the user.
+
+SET_PROCESS_LIMIT: Allows the app to set the maximum number of processes that can be running.
+
+SET_TIME: Grants permission to set the device's system time.
+
+SET_TIME_ZONE: Enables the app to set the device's time zone.
+
+SET_WALLPAPER: Allows the app to set the system wallpaper.
+SET_WALLPAPER_HINTS: Allows the app to set hints about the desired wallpaper dimensions and positioning.
+
+SIGNAL_PERSISTENT_PROCESSES: Grants permission to request that the system runs a process at the given priority and importance level.
+
+STATUS_BAR: Allows the app to open, close, or disable the status bar and its icons.
+
+SYSTEM_ALERT_WINDOW: Enables the app to display windows on top of all other apps.
+
+TRANSMIT_IR: Grants permission to control the device's infrared transmitter.
+
+UNINSTALL_SHORTCUT: Allows the app to uninstall a shortcut from the Launcher.
+
+UPDATE_DEVICE_STATS: Enables the app to update device statistics.
+
+USE_FINGERPRINT: Grants permission to use fingerprint hardware.
+
+USE_SIP: Allows the app to use Session Initiation Protocol (SIP) for communication.
+
+VIBRATE: Enables the app to control the device's vibrator.
+
+WAKE_LOCK: Allows the app to keep the device screen from turning off or dimming.
+
+WRITE_APN_SETTINGS: Grants permission to write the Access Point Name (APN) settings.
+
+WRITE_CALENDAR: Enables the app to write to the user's calendar data.
+
+WRITE_CALL_LOG: Allows the app to write the user's call log data.
+
+WRITE_CONTACTS: Grants permission to write to the user's contacts data.
+
+WRITE_EXTERNAL_STORAGE: Enables the app to write to external storage, such as the SD card.
+
+WRITE_GSERVICES: Allows the app to modify Google service map settings.
+
+WRITE_SECURE_SETTINGS: Grants permission to read or write secure system settings.
+
+WRITE_SETTINGS: Enables the app to read or write system settings.
+
+WRITE_SYNC_SETTINGS: Allows the app to write the user's sync settings.
+
+WRITE_VOICEMAIL: Allows the app to modify or delete the voicemail messages stored on the device.
+
+ACCESS_CHECKIN_PROPERTIES: Grants permission to access the properties of the check-in database.
+
+ACCESS_DOWNLOAD_MANAGER: Enables the app to access the download manager and initiate downloads.
+
+ACCESS_DRM: Allows the app to access DRM (Digital Rights Management) content.
+
+ACCESS_FM_RADIO: Grants permission to access the FM radio hardware on the device.
+
+ACCESS_MOCK_LOCATION: Enables the app to access mock location sources for testing purposes.
+
+ACCESS_NETWORK_CONDITIONS: Allows the app to access information about network connectivity and conditions.
+
+ACCESS_NOTIFICATION_POLICY: Grants permission to access the Do Not Disturb (DND) notification policy.
+
+ACCESS_UCE_OPTIONS_SERVICE: Enables the app to access the User Consenting Experience (UCE) options service.
+
+ACCESS_WIFI_STATE: Allows the app to access information about Wi-Fi networks, such as whether Wi-Fi is enabled, and the names of connected Wi-Fi devices.
