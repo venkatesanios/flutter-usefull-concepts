@@ -22,4 +22,20 @@ if(dt1.compareTo(dt2) > 0){
 
 
 }
-//
+// add subtract date hours minutes
+
+
+void main() {
+
+final now = DateTime.now();
+final future = now.add(const Duration(days: 2,hours: 2, minutes: 3, seconds: 2));
+final past = now.subtract(const Duration(days: 28));
+final newDate = now.toUtc();
+print(now); 
+print(now.compareTo(future)); 
+print(now.compareTo(past)); 
+print(now.compareTo(newDate));
+print(future); 
+print(past); 
+print(newDate.month); 
+}
