@@ -1,0 +1,25 @@
+//Compare two dates 
+void main() {
+  
+DateTime dt1 = DateTime.parse("2021-12-23");
+DateTime dt2 = DateTime.parse("2021-12-23");
+
+if(dt1.compareTo(dt2) == 0){
+    print("Both date time are at same moment.");
+}
+
+ dt1 = DateTime.parse("2021-11-23");
+ dt2 = DateTime.parse("2021-12-23");
+if(dt1.compareTo(dt2) < 0){
+    print("DT1 is Lesser then DT2");
+}
+
+ dt1 = DateTime.parse("2021-12-23");
+ dt2 = DateTime.parse("2021-11-23");
+if(dt1.compareTo(dt2) > 0){
+    print("DT1 is greater then DT2");
+}
+
+
+}
+//
