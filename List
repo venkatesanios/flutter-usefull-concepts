@@ -101,3 +101,36 @@ abstract class Math{
   
 }
 
+
+
+ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements of the list that are less than 5.
+
+void main() {
+ 
+   List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    print('For loop');
+  for (int i = 0; i < a.length; i++) {
+    if(a[i]>5){
+      print(a[i]);
+    }
+    
+
+  }
+   print('For each');
+  a.forEach((number) {
+    if(number>5){
+      print(number);
+                }
+  });
+  
+   print('high order ');
+   List<int> filteredNumbers = a.where((number) => number > 5).toList();
+  print(filteredNumbers);
+  
+  filteredNumbers.forEach((number) {
+    print(number);
+  });
+      
+}
+
