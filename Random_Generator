@@ -1,0 +1,18 @@
+import 'dart:math';
+
+void main() {
+   final random = Random();
+  List<int> randList = List.generate(10, (_) => random.nextInt(100) + 50);
+   print(randList);
+print(random.nextInt(34));
+
+
+List<int> newList(List<int> initialList) {
+  return [initialList.first, initialList.last];
+}
+    print(newList(randList));
+  
+  var boolValue = Random().nextBool(); 
+  
+  print(boolValue);
+}
