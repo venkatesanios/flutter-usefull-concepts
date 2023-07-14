@@ -1,0 +1,56 @@
+void main() {
+  int count = askUserForCount();
+  List<int> fibonacciSequence = generateFibonacciSequence(count);
+    List<int> fibonacciSequene = generateFibonacciSeries(15);
+
+  print(fibonacciSequence);
+   print(fibonacciSequene);
+}
+
+int askUserForCount() {
+  print("How many Fibonacci numbers would you like to generate?");
+  String input = '8';
+  return int.parse(input);
+}
+
+List<int> generateFibonacciSequence(int count) {
+  List<int> fibonacciSequence = [];
+
+  if (count >= 1) {
+    fibonacciSequence.add(0);
+  }
+  if (count >= 2) {
+    fibonacciSequence.add(1);
+  }
+  if (count >= 3) {
+    for (int i = 2; i < count; i++) {
+      int nextNumber = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+      fibonacciSequence.add(nextNumber);
+    }
+  }
+
+ return fibonacciSequence;
+}
+  
+   List<int> generateFibonacciSeries(int count) {
+    List<int> fibonacciSeries = [];
+
+    int first = 0;
+    int second = 1;
+
+    fibonacciSeries.add(first);
+    fibonacciSeries.add(second);
+
+    for (int i = 2; i < count; i++) {
+      int nextNumber = first + second;
+      fibonacciSeries.add(nextNumber);
+      first = second;
+      second = nextNumber;
+    }
+
+     return fibonacciSeries;
+     
+  }
+   
+
+
