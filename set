@@ -1,0 +1,45 @@
+void main() {
+ ///Intersections 
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+  List<int> b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 89];
+  List<dynamic> c = [];
+  c = Set.from(a).intersection(Set.from(b)).toList(); 
+    print(c);
+ c = (Set.from(a).intersection(Set.from(b)).toList()..sort((a,b) => b.compareTo(a)));
+    print(c);
+
+
+  ///UNION
+  Set<int> setOfOddNumbers = {1, 3, 5, 7, 9};
+  Set<int> setOfEvenNumbers = {2, 4, 6, 8, 10};
+  List<int> sortedList =
+      (setOfOddNumbers.union(setOfEvenNumbers)).toList()..sort();
+  List<int> sortedLista =
+      (setOfOddNumbers.union(setOfEvenNumbers)).toList()..sort();
+  List<int> sortedListb =
+      (setOfOddNumbers.union(setOfEvenNumbers)).toList()
+        ..sort((a, b) => b.compareTo(a)); 
+  print(sortedList); 
+  print(sortedLista); 
+  print(sortedListb);
+
+
+//difference
+
+  Set<int> firstSet = {1, 2, 3, 4, 5, 6};
+
+  Set<int> secondSet = {1, 4, 2, 6, 8, 7};
+
+   print("${firstSet.difference(secondSet)}"); 
+ print("${(firstSet.difference(secondSet)).toList()..sort()}"); 
+
+  print("${ Set.from(a).difference( Set.from(b))}");
+
+}
+
+
+
+
+
+
+
