@@ -1,0 +1,23 @@
+void main() {
+  List<int> listOfIntegers = [1,2,4,5,6,7,8,9];
+
+  var reversedList = listOfIntegers.reversed;
+   print(reversedList);
+  
+  final numbers = <int>[1,2,4,5,6,7,8,9];
+numbers.shuffle();
+print(numbers); 
+  
+  
+   var listOfNumbers = [2,4,9,6];
+
+ int result = listOfNumbers.fold(0, (i, j) => i+j);
+
+ print('Resultant value is: ${result}');
+  
+  
+  
+  
+     
+  }
+   
