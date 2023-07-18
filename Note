@@ -1,2 +1,24 @@
 %@/api/v1/signin
 {"mobileCountryCode":"91","mobileNumber":"7373075677","password":"e10adc3949ba59abbe56e057f20f883e","language":"1","deviceToken":"coZSnIt4BQo:APA91bE-XaEZiVjLm5UqDhwowDHNyUdALRkHuycCsMRwrpcAJdZNNvFakKW5fiypZBPsMsr3demQIf5ww93YEa-8ZUlSgPKVYZdUTR4PLBWnpfzd1Y4juEavL3kqaL4jA4GDYctKjhM7","macAddress":"6df5bea1567ba03b"}
+
+
+
+Create new project
+Add pubspec.yaml  plugins 
+Create app.dart file
+Locator add navigation service
+Create init app add locator
+Add in init package in main .dart
+Run cmd in  flutter pub get && flutter pub run build_runner build --delete-conflicting-outputs
+After run command appRouter will create
+Add main.dart                                                   onGenerateRoute: StackedRouter().onGenerateRoute,
+      navigatorKey: StackedService.navigatorKey,   
+Create navigation mixin.  Ex   void goToDashboard() => _navigationService.navigateTo(Routes.dashboardView);
+
+
+Api Generator     core -> apiservice.dart file(inside apiservice in create REST Apis)                                    
+Add Api service inside a locator.dart   ex: locator.registerLazySingleton<ApiService>(() => ApiService.init());
+
+Run cmd in  flutter pub get && flutter pub run build_runner build --delete-conflicting-outputs
+After butld runner apiservice.g.dart create automatically 
+Every new Api service  run build runner cmd
