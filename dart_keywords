@@ -1,0 +1,320 @@
+
+1. **abstract**: Used to define an abstract class. Abstract classes cannot be instantiated directly; they provide a blueprint for other classes to extend.
+
+2. **as**: Used for type casting. It allows you to treat an object as a different type.
+
+3. **assert**: Used for debugging and testing purposes. It checks if a given condition is true during runtime. If the condition is false, it throws an assertion error.
+
+4. **async**: Used to mark a function as asynchronous. An asynchronous function can use the "await" keyword to wait for the completion of asynchronous operations.
+
+5. **await**: Used inside an async function to pause the execution and wait for the completion of a Future before proceeding.
+
+6. **break**: Used to terminate a loop or switch statement and exit the current block of code.
+
+7. **case**: Used in switch statements to define different cases based on the value of a variable.
+
+8. **catch**: Used in try-catch blocks to handle exceptions and errors that occur within the try block.
+
+9. **class**: Used to define a new class, encapsulating data and behavior within a single unit.
+
+10. **const**: Used to declare a constant variable. The value of a constant variable cannot be changed after its initialization.
+
+11. **continue**: Used to terminate the current iteration of a loop and proceed to the next iteration.
+
+12. **covariant**: Used in method parameters to indicate that the parameter's type can be a subtype of the specified type.
+
+13. **default**: Used in switch statements to provide a default case when none of the other cases match.
+
+14. **deferred**: Used in conjunction with the "import" keyword for deferred loading of libraries. It allows you to load a library only when it is needed.
+
+15. **do**: Used to define a do-while loop, which executes a block of code at least once before checking the loop condition.
+
+16. **dynamic**: Represents a type that is not known until runtime, allowing for more flexible programming.
+
+17. **else**: Used in conditional statements to define the block of code that is executed when the condition is false.
+
+18. **enum**: Used to define an enumeration, which is a set of named constant values.
+
+19. **export**: Used to make classes, functions, or variables from one Dart file available for use in another Dart file.
+
+20. **extends**: Used to define a class that inherits properties and methods from another class (subclassing).
+
+21. **extension**: Used to define an extension, which allows adding methods or getters to existing classes without modifying their source code.
+
+22. **external**: Used to indicate that a function or variable is implemented externally, outside the Dart code.
+
+23. **factory**: Used to define a factory constructor, which returns an instance of a class that may not be the type of the class itself.
+
+24. **false**: Represents the boolean value "false."
+
+25. **final**: Used to declare a variable that can be assigned a value only once.
+
+26. **finally**: Used in try-catch blocks to define a block of code that is executed regardless of whether an exception is thrown or not.
+
+27. **for**: Used to define a loop that repeats a block of code for a specified number of times.
+
+28. **Function**: Represents the type of a function, allowing functions to be treated as objects.
+
+29. **get**: Used to define a getter method, which allows access to the value of an object's property.
+
+30. **hide**: Used in combination with the "import" keyword to selectively hide specific names from the imported library.
+
+31. **if**: Used in conditional statements to define the block of code that is executed when a certain condition is true.
+
+32. **implements**: Used to indicate that a class implements specific interfaces, requiring it to provide implementations for the interface's methods.
+
+33. **import**: Used to import classes, functions, or variables from another Dart file into the current file.
+
+34. **in**: Used in "for-in" loops to iterate over elements in a collection (e.g., lists, maps).
+
+35. **inout**: Used for variance annotations, indicating that a type parameter can be used as both input and output.
+
+36. **int**: Represents the integer data type.
+
+37. **interface**: Not used as a keyword in Dart anymore. It was historically used for interface definitions but has been removed.
+
+38. **is**: Used for type checking, checking if an object is an instance of a particular class or type.
+
+39. **late**: Used to indicate that a non-nullable variable will be assigned a value later during the program's execution.
+
+40. **library**: Used to define the library name and visibility scope of a Dart file.
+
+41. **mixin**: Used to define a mixin, a way to reuse a class's code in multiple class hierarchies without using inheritance.
+
+42. **new**: Used to create instances of classes and constructors.
+
+43. **null**: Represents the absence of a value or an uninitialized variable.
+
+44. **of**: Used in "for-in" loops to iterate over elements in a collection (e.g., lists, maps).
+
+45. **on**: Used in try-catch blocks to catch specific types of exceptions.
+
+46. **operator**: Used to define operator overloading methods, allowing custom behavior for operators like +, -, *,
+
+ etc.
+
+47. **out**: Used for variance annotations, indicating that a type parameter can be used only as output.
+
+48. **part**: Used to indicate that a Dart file is a part of a library, used in conjunction with "part of" in the main library file.
+
+49. **rethrow**: Used inside a catch block to rethrow the caught exception, propagating it to the next try-catch block.
+
+50. **return**: Used to exit a function and return a value to its caller.
+
+51. **set**: Used to define a setter method, which allows modifying the value of an object's property.
+
+52. **show**: Used in combination with the "import" keyword to selectively import specific names from the imported library.
+
+53. **static**: Used to define class-level members that are accessible without creating an instance of the class.
+
+54. **super**: Used to call methods or access properties of the superclass from the subclass.
+
+55. **switch**: Used to define a switch statement, which evaluates an expression and executes the block of code that matches a specific case.
+
+56. **sync**: Used to mark a function as synchronous, meaning it executes in a blocking manner without performing asynchronous operations.
+
+57. **this**: Represents the current instance of a class.
+
+58. **throw**: Used to throw an exception explicitly.
+
+59. **true**: Represents the boolean value "true."
+
+60. **try**: Used to define a try-catch block, which allows handling exceptions and errors.
+
+61. **typedef**: Used to define a function type alias, creating a custom function signature.
+
+62. **var**: Used to declare variables, with their type inferred from the assigned value.
+
+63. **void**: Represents the absence of a value. Used as a return type for functions that do not return anything.
+
+64. **while**: Used to define a while loop, which executes a block of code as long as a certain condition is true.
+
+65. **with**: Used to mix in a class's functionality from one or more mixins.
+
+66. **yield**: Used inside an asynchronous generator function ("async*") to emit values as an asynchronous stream.
+
+
+
+
+ 
+1. **Dart SDK**: The software development kit (SDK) for Dart, which includes the Dart runtime, libraries, and tools for development.
+
+2. **Zone**: A Dart feature that allows you to manage the execution of asynchronous code and handle errors across asynchronous boundaries.
+
+3. **ZoneSpecification**: An object that defines how zones handle asynchronous operations and errors.
+
+4. **ZoneDelegate**: An object used by zones to delegate certain operations to other zones.
+
+5. **Zone fork()**: A method to create a new zone with a specified specification and delegate.
+
+6. **Zone run()**: A method to run a function inside a specific zone.
+
+7. **Zone handleUncaughtError()**: A method called when an uncaught error occurs in a zone.
+
+8. **Zone.current**: A property that provides access to the current zone within a function.
+
+9. **Type**: Represents the type of an object at runtime.
+
+10. **Object**: The root class of all Dart objects. All other classes implicitly or explicitly inherit from Object.
+
+11. **Iterable**: An interface for collections of elements that can be iterated sequentially.
+
+12. **Iterator**: An object used to iterate over the elements of an Iterable.
+
+13. **MapEntry**: An object representing a key-value pair in a Map.
+
+14. **FutureOr**: A type that represents a value that can be either a Future or a non-Future value.
+
+15. **Future.then()**: A method used to add a callback that will be executed when a Future completes with a value.
+
+16. **Future.catchError()**: A method used to add a callback that will be executed if a Future completes with an error.
+
+17. **Future.whenComplete()**: A method used to add a callback that will be executed when a Future completes, whether with a value or an error.
+
+18. **Stream**: A source of asynchronous data events in Dart.
+
+19. **StreamSubscription**: An object representing an active subscription to a Stream.
+
+20. **StreamController**: A class that allows you to create and control a Stream.
+
+21. **StreamTransformer**: A class used to transform a Stream using custom logic.
+
+22. **Stream.fromFuture()**: A constructor to create a Stream that emits a single value from a Future.
+
+23. **Stream.fromIterable()**: A constructor to create a Stream that emits values from an Iterable.
+
+24. **Stream.fromFutures()**: A constructor to create a Stream that emits multiple values from a list of Futures.
+
+25. **Stream.listen()**: A method to subscribe to a Stream and receive events when they are emitted.
+
+26. **Stream.listen() callback**: A function that is executed when a Stream emits an event.
+
+27. **Stream.forEach()**: A method to consume all events of a Stream with a provided callback.
+
+28. **Stream.transform()**: A method to apply a StreamTransformer to a Stream.
+
+29. **Stream.asyncMap()**: A method to transform events of a Stream asynchronously.
+
+30. **Stream.expand()**: A method to transform each event of a Stream into multiple events.
+ 
+1. **Variables**: Dart allows you to declare variables to store data. You can use the "var" keyword for type inference or explicitly declare the type using keywords like "int," "double," "String," and more.
+
+2. **Data Types**: Dart has various data types, including numbers (integers and doubles), strings, booleans, lists, maps, and more.
+
+3. **Functions**: Functions in Dart are blocks of code that can be called to perform a specific task. You can define named functions, anonymous functions (closures), and arrow functions (lambda expressions).
+
+4. **Conditional Statements**: Dart supports "if," "else," and "switch" statements for making decisions based on conditions.
+
+5. **Loops**: Dart provides "for," "while," and "do-while" loops to iterate over collections or execute code repeatedly based on conditions.
+
+6. **Classes and Objects**: Dart is an object-oriented language, and you can create classes to define object blueprints. Objects are instances of classes.
+
+7. **Constructors**: Constructors are special methods used to initialize objects when they are created. Dart supports default constructors, named constructors, and factory constructors.
+
+8. **Inheritance**: Dart supports class inheritance, allowing you to create subclasses that inherit properties and methods from a superclass.
+
+9. **Collections**: Dart has built-in collections like lists, sets, and maps to store and manipulate multiple values efficiently.
+
+10. **Lists**: Lists are ordered collections of elements, which can be accessed using indexes.
+
+11. **Sets**: Sets are collections of unique elements, meaning each element can only appear once in a set.
+
+12. **Maps**: Maps are key-value pairs, where each key maps to a corresponding value.
+
+13. **Null Safety**: Dart introduces null safety, which helps prevent null reference errors by distinguishing between nullable and non-nullable types.
+
+14. **Async/Await**: Dart supports asynchronous programming with "async" and "await," allowing you to work with Futures and handle asynchronous operations more easily.
+
+15. **Comments**: You can use single-line (//) or multi-line (/* */) comments to add notes and explanations to your code.
+
+16. **Strings**: Dart strings can be declared using single or double quotes, and you can perform operations like concatenation and interpolation.
+
+17. **Print Function**: Dart's "print()" function is used to display output to the console for debugging and logging purposes.
+
+18. **Final and Const**: "final" is used to declare variables that can be assigned a value only once, and "const" is used for compile-time constants.
+
+19. **Casting**: Dart allows you to cast variables to different data types using type casting.
+
+20. **Try-Catch Blocks**: Dart provides try-catch blocks to handle exceptions and errors, ensuring your program doesn't crash unexpectedly.
+ 
+21. **Arithmetic Operators**: Dart supports basic arithmetic operators like "+", "-", "*", "/", and "%", allowing you to perform arithmetic calculations.
+
+22. **Comparison Operators**: Dart has comparison operators like "==", "!=", "<", ">", "<=", and ">=", to compare values and evaluate conditions.
+
+23. **Logical Operators**: Dart supports logical operators like "&&" (AND), "||" (OR), and "!" (NOT) for combining conditions and making logical decisions.
+
+24. **String Methods**: Dart provides useful string methods like "length," "toUpperCase()," "toLowerCase()," "substring()," "split()," and "trim()," for manipulating strings.
+
+25. **List Methods**: Dart lists have methods like "add()," "remove()," "contains()," "isEmpty()," and "length," for managing and interacting with lists.
+
+26. **Map Methods**: Dart maps have methods like "put()," "remove()," "containsKey()," "keys," and "values," for adding, removing, and accessing key-value pairs in maps.
+
+27. **if-else Short-hand**: Dart provides a concise way to assign a value to a variable based on a condition using the ternary operator, e.g., `variable = condition ? value1 : value2;`.
+
+28. **Switch Statement Fall-through**: In Dart, the "switch" statement does not fall through cases unless you explicitly use the "continue" statement.
+
+29. **Named Parameters**: Dart allows you to pass parameters to functions using their names, making function calls more readable and flexible.
+
+30. **Default Parameter Values**: You can provide default values for function parameters, allowing the function to be called with fewer arguments.
+
+31. **Optional Parameters**: Dart supports optional parameters, both positional and named, which can be omitted when calling a function.
+
+32. **Getter and Setter**: Dart allows you to define getters and setters to access and modify class properties.
+
+33. **Dart Development Tools**: Dart comes with a set of development tools like the Dart SDK, Dart Analyzer, and Dart DevTools, aiding in code analysis, debugging, and profiling.
+
+34. **Package Management**: Dart uses the Pub package manager to manage dependencies and share reusable code libraries.
+
+35. **Mixins in Classes**: Mixins in Dart allow you to add functionality to a class without using inheritance, promoting code reuse.
+
+36. **Asynchronous Iteration**: Dart allows you to use the "await for" loop to asynchronously iterate over a Stream.
+
+37. **Cascade Notation (..)**: Cascade notation ("..") enables chaining multiple method calls on the same object without repeating the object reference.
+
+38. **Enums with Values**: Dart's enums can have associated values, allowing you to assign custom data to each enum constant.
+
+39. **Async Functions with Multiple Awaits**: Dart's async functions can have multiple "await" expressions to wait for multiple asynchronous operations.
+
+40. **Future.catchError() with on Error and Stack Trace**: You can catch and handle errors when working with Futures using the "catchError()" method, which also provides access to the error and stack trace.
+
+41. **Dart DevTools**: Dart DevTools is a set of debugging and profiling tools that help you analyze and optimize your Dart applications.
+
+42. **Arithmetic Assignment Operators**: Dart provides shorthand operators like "+=", "-=", "*=", "/=", and "%=" to perform arithmetic operations and assign the result to a variable in a single step.
+
+43. **Logical Assignment Operators**: Dart supports logical assignment operators like "&&=" and "||=" to perform logical operations and update the value of a boolean variable in a single step.
+
+44. **Null-aware Operators**: Dart has null-aware operators like "??", "??=", and "?." to handle null values more efficiently and safely.
+
+45. **Dart Libraries**: Dart libraries are collections of related code that can be imported and used in other Dart files to promote modularity and code organization.
+
+46. **Default Constructors**: If a class does not have any explicit constructors, Dart automatically provides a default constructor with no arguments.
+
+47. **Getter-only Properties**: You can create getter-only properties in Dart using the "get" keyword, allowing you to calculate and return values based on other class properties.
+
+48. **Static Methods**: Dart allows you to define static methods that belong to the class itself rather than individual instances of the class.
+
+49. **Named Constructors**: In addition to default constructors, Dart allows you to define named constructors with custom initialization logic.
+
+50. **Function Expressions**: Dart supports function expressions, also known as lambda expressions or anonymous functions, which are shorter ways to define functions inline.
+
+51. **Class Constructors with Initializer Lists**: Dart allows you to use initializer lists in constructors to set properties before the constructor body is executed.
+
+52. **Cascade Notation (..) with Conditional Statements**: You can use cascade notation in conjunction with conditional statements, allowing you to perform conditional operations on multiple properties of an object.
+
+53. **Dart Type Inference**: Dart's type inference system allows you to omit explicit type declarations in some cases, making the code more concise.
+
+54. **Dart String Interpolation**: Dart supports string interpolation, where you can embed expressions and variables directly into a string using "${}".
+
+55. **Dart Multi-line Strings**: Dart allows you to create multi-line strings using triple quotes (""").
+
+56. **Class Constructors with Named Parameters**: Dart enables you to use named parameters in constructors, making it easier to create objects with specific property values.
+
+57. **Single Abstract Method (SAM) Interface**: While Dart doesn't have the "interface" keyword like some other languages, you can create single abstract method interfaces using abstract classes or function typedefs.
+
+58. **Dart Isolates**: Dart isolates allow you to run multiple concurrent tasks in separate memory spaces, enabling concurrent processing and parallel execution.
+
+59. **Dart Extensions on External Classes**: Dart extensions enable you to add new functionality to existing classes, including classes from external libraries.
+
+60. **Enum Methods**: Dart enums support methods, allowing you to define behavior associated with specific enum constants.
+
+ 
