@@ -1,0 +1,9 @@
+Spacer:
+Spacer is a widget that takes all the available space along the main axis of the parent Row or Column. It is similar to Expanded, but it doesn't require a child.
+
+
+Expanded:
+Expanded is similar to Flexible, but it's a shorthand for Flexible with flex: 1. It expands to take as much space as possible along the main axis of the parent Row or Column, pushing other non-expanded children to the minimum necessary size.
+ 
+Flexible:
+The Flexible widget allows its child to flexibly occupy the available space along the main axis of the parent Row or Column. It takes a flex property, which determines how much of the available space each Flexible child should occupy relative to other Flexible children. Higher flex values will take more space.
