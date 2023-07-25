@@ -1,0 +1,81 @@
+CamelCase:
+
+In CamelCase, the first letter of the first word is lowercase, and the first letter of each subsequent concatenated word is capitalized.
+No spaces or underscores are used between words, and each word is joined without any separator.
+Example: myVariableName, calculateTotalAmount, phoneNumber.
+PascalCase (or UpperCamelCase):
+
+In PascalCase, the first letter of each word is capitalized, including the first word.
+No spaces or underscores are used between words, and each word is joined without any separator.
+Example: MyClassName, CalculateAreaOfRectangle, PhoneNumber.
+snake_case:
+
+In snake_case, words are written in lowercase, and underscores _ are used to separate words.
+Words are joined with underscores, and there are no uppercase letters.
+Example: my_variable_name, calculate_total_amount, phone_number.
+
+
+CamelCase:
+
+JavaScript
+TypeScript
+ActionScript
+Objective-C
+Swift (for variable and function names)
+C#
+Java
+Kotlin
+Ruby (for method names)
+PascalCase (or UpperCamelCase):
+
+C#
+Java
+Kotlin
+Swift (for class, struct, enum, and protocol names)
+Ruby (for class and module names)
+Delphi/Object Pascal
+Ada
+VB.NET
+snake_case:
+
+Python
+Ruby (for variable and method names)
+PHP
+Rust
+Lua
+Go (for variable and function names)
+Perl
+C/C++ (in some cases)
+kebab-case (hyphen-case):
+
+CSS (for class and ID names)
+HTML (for attribute names)
+XML (for attribute names)
+Dart (for package names)
+UPPER_CASE (all caps):
+
+C/C++
+Assembly languages
+PHP (for constants)
+SQL (for keywords and identifiers)
+dot.case:
+
+JavaScript (for property names in some contexts, e.g., JSON keys)
+camel_Snake_Case:
+
+PostgreSQL (for column names in some contexts)
+CAPITALIZED_WITH_UNDERSCORES:
+
+SQL (for table and column names)
+lowercase:
+
+Bash/Shell scripting
+UpperCase:
+
+COBOL
+Title Case:
+
+Swift (for enum cases)
+Hungarian Notation:
+
+Older Windows APIs and some legacy codebases
