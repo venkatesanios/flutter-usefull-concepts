@@ -1,3 +1,4 @@
+***
 **CamelCase:**
 
 In CamelCase, the first letter of the first word is lowercase, and the first letter of each subsequent concatenated word is capitalized.
@@ -78,4 +79,4 @@ Title Case:
 Swift (for enum cases)
 Hungarian Notation:
 
-Older Windows APIs and some legacy codebases
+***
