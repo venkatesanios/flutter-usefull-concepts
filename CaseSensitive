@@ -1,4 +1,4 @@
-CamelCase:
+**CamelCase:**
 
 In CamelCase, the first letter of the first word is lowercase, and the first letter of each subsequent concatenated word is capitalized.
 No spaces or underscores are used between words, and each word is joined without any separator.
