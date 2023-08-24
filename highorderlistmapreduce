@@ -1,0 +1,68 @@
+void main() {
+  
+   List<int> myList = [1,2,3,4,5,6,7,8,9,10];
+  
+ print(myList.sublist(0,4)); 
+  print(myList.sublist(0));
+  // var myList12 = myList.shuffle();
+   
+  
+  print(myList.reversed.toList()); 
+ 
+ 
+   List<String> stringList = myList.map((int number) => number.toString()).toList();
+  List<String> stringListqoutes = myList.map((int number) => "'$number'").toList();
+
+  print(stringList);
+  
+    print(stringListqoutes);
+
+  
+  Map<int, int> map = myList.asMap();
+ print(map); 
+   Map<int, String> map1 = stringListqoutes.asMap();
+ print(map1); 
+  
+  var mixList = [1.5, "a", 2, "b", 3, "c", 4, "d",false,true,445.5];
+ var num = mixList.whereType<int>();
+ print(num);  
+   var num1 = mixList.whereType<bool>();
+ print(num1);  
+     var num2 = mixList.whereType<String>();
+ print(num2);  
+  
+//   myList.replaceRange(4,9, [10,11,12]);
+//  print('$myList');
+  
+   print(myList.firstWhere((i) => i > 4)); 
+     print(myList.lastWhere((i) => i > 4)); 
+
+  
+   var sList = [1, 2, 3, 5, 4];
+ print(sList.singleWhere((i) => i == 4)); 
+// Bad state: Too many elements
+ 
+ print(sList.singleWhere((i) => i == 3)); // 3
+  
+   var lst = [1,2,3,4,5];
+ var res = lst.fold(1, (i, j) => i * j);
+ print('res is ${res}'); // res is 120 * =>1 + ,- => 0
+  
+  var res1 = lst.reduce((i, j) => i - j);
+ print('res is ${res1}'); // res is 15
+  
+  var sportsList = ['cricket', 'tennis', 'football'];
+print(sportsList.followedBy(['golf', 'chess']).toList()); 
+  
+  print(sportsList.any((e) => e.contains('cricket'))); // true
+print(sportsList.every((e) => e.startsWith('a'))); // false
+print(sportsList.take(2));  // (cricket, tennis)
+print(sportsList.skip(2));  // (football)
+
+  
+//   https://medium.com/flutter-community/useful-list-methods-in-dart-6e173cac803d
+
+ }
+
+
+ 
