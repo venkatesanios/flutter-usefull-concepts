@@ -38,4 +38,19 @@ print(now.compareTo(newDate));
 print(future); 
 print(past); 
 print(newDate.month); 
+
+ DateTime now = DateTime.now(); 
+  String greeting = '';
+if (now.hour >= 0 && now.hour < 12) {
+  greeting = 'Good Morning';
+} else if (now.hour >= 12 && now.hour < 17) {
+  greeting = 'Good Afternoon';
+} else if (now.hour >= 17 && now.hour < 20) {
+  greeting = 'Good Evening';
+}else {
+  greeting = 'Good Night';
+}
+print(greeting);
+
+
 }
