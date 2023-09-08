@@ -1,1 +1,45 @@
 
+
+
+
+ String test = ''' the 6th and 7th centuries, the first devotional hymns were created in the Tamil language.[113] They were imitated all over India and led to both the resurgence of Hinduism and the development of all modern
+   languages of the subcontinent.[113] Indian royalty, big and small, and the 
+   temples they patronised drew citizens in great numbers to the capital cities, 
+   which became economic hubs as well.[114] Temple towns of various sizes began to appear
+    everywhere as India underwent another urbanisation.[114] By the 8th and 9th centuries, the effects were felt in South-East Asia, as South Indian culture and political systems were exported to lands
+    that became part of modern-day Myanmar, Thailand, Laos, Brunei, Cambodia, Vietnam, Philippines, Malaysia, and Indonesia.[115] Indian merchants, scholars, and sometimes armies were involved in this transmission;
+     South-East Asians took the initiative as well, with many sojourning in Indian seminaries and translating Buddhist and Hindu texts into their languages.[115]
+e South Indian society for long afterwards''';
+
+                          print('lower--------------------------------------');
+                          String localizedText = test.toLowerCase();
+                          print(
+                              localizedText); // Output: "This Is A Sample Sentence"
+                          print(
+                              'Upper------------------------------------------');
+                          String UocalizedText = test.toUpperCase();
+                          print(UocalizedText);
+                          print(
+                              'capitalizeFirstLetterOfWords------------------------------------------');
+
+                          String capitalizedText =
+                              capitalizeFirstLetterOfWords(test);
+                          print(
+                              capitalizedText);  
+
+
+String capitalizeFirstLetterOfWords(String input) {
+  List<String> words = input.split(' ');
+  List<String> capitalizedWords = [];
+
+  for (String word in words) {
+    if (word.isNotEmpty) {
+      String capitalizedWord = word[0].toUpperCase() + word.substring(1);
+      capitalizedWords.add(capitalizedWord);
+    }
+  }
+
+  return capitalizedWords.join(' ');
+}
+
+
