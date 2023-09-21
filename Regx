@@ -148,4 +148,105 @@ Certainly! Here are some more regex examples with explanations:
    - `<` and `>` represent the opening and closing angle brackets of HTML tags.
    - `[^>]+` matches one or more characters that are not the closing angle bracket `>`, effectively capturing the entire tag.
 
+Certainly! Here are some additional examples of regular expressions (regex) that can be useful in mobile app development:
+
+9. **Matching Phone Numbers (General):**
+
+   ```dart
+   RegExp phoneRegex = RegExp(r'^\+?[0-9]+([- ]?[0-9]+)*$');
+   ```
+
+   Explanation:
+   - This regex matches phone numbers in various formats, including international numbers with optional plus signs, spaces, or hyphens.
+   - `^` and `$` ensure the pattern matches the entire string.
+   - `\+?` matches an optional plus sign (common in international numbers).
+   - `[0-9]+` matches one or more digits.
+   - `([- ]?[0-9]+)*` allows for optional spaces or hyphens between digits.
+
+10. **Matching URLs with Optional "www":**
+
+    ```dart
+    RegExp urlRegex = RegExp(r'^(https?://)?(www\.)?[^\s/$.?#].[^\s]*$');
+    ```
+
+    Explanation:
+    - This regex matches URLs that start with "http://", "https://", or "www." (with or without "www").
+    - `^` and `$` ensure the pattern matches the entire string.
+    - `(https?://)?` matches an optional protocol.
+    - `(www\.)?` matches an optional "www" subdomain.
+    - `[^\s/$.?#]` matches characters allowed in the domain part.
+    - `[^\s]*$` matches any characters until the end, allowing for optional path and query parameters.
+
+11. **Matching ZIP Codes (U.S.):**
+
+    ```dart
+    RegExp zipCodeRegex = RegExp(r'^\d{5}(?:[-\s]\d{4})?$');
+    ```
+
+    Explanation:
+    - This regex matches U.S. ZIP codes in the format "12345" or "12345-6789."
+    - `^` and `$` ensure the pattern matches the entire string.
+    - `\d{5}` matches five digits for the ZIP code.
+    - `(?:[-\s]\d{4})?` allows for an optional hyphen and four more digits for ZIP+4 codes.
+
+12. **Matching Email Addresses (Case-Insensitive):**
+
+    ```dart
+    RegExp emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$', caseSensitive: false);
+    ```
+
+    Explanation:
+    - This regex matches email addresses, allowing for a case-insensitive match.
+    - `^` and `$` ensure the pattern matches the entire string.
+    - `caseSensitive: false` is added to the `RegExp` constructor to make the match case-insensitive.
+
+ Certainly! Here are a few more regex examples that may be useful in mobile app development:
+
+13. **Matching Social Media Usernames (Twitter Handles):**
+
+    ```dart
+    RegExp twitterUsernameRegex = RegExp(r'@([A-Za-z0-9_]+)');
+    ```
+
+    Explanation:
+    - This regex matches Twitter usernames, which start with "@" followed by alphanumeric characters and underscores.
+    - The parentheses capture the username without the "@" symbol.
+
+14. **Matching Date Formats (MM/DD/YYYY and YYYY-MM-DD):**
+
+    ```dart
+    RegExp dateRegex = RegExp(r'^(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|[12][0-9]|3[01])/\d{4}|(?:\d{4}-[0-1]\d-[0-3]\d))$');
+    ```
+
+    Explanation:
+    - This regex matches dates in two common formats: "MM/DD/YYYY" and "YYYY-MM-DD."
+    - The `|` symbol provides an OR condition between the two date formats.
+
+15. **Matching Strong Passwords:**
+
+    ```dart
+    RegExp strongPasswordRegex = RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%^&*]).{8,}$');
+    ```
+
+    Explanation:
+    - This regex matches strong passwords that contain at least one uppercase letter, one lowercase letter, one digit, one special character (!@#$%^&*), and are at least 8 characters long.
+
+16. **Matching Hashtags (Twitter/Instagram-style):**
+
+    ```dart
+    RegExp hashtagRegex = RegExp(r'#\w+');
+    ```
+
+    Explanation:
+    - This regex matches hashtags, which start with "#" followed by one or more word characters (letters, digits, or underscores).
+
+17. **Matching Credit Card Numbers (Basic Validation):**
+
+    ```dart
+    RegExp creditCardRegex = RegExp(r'^\d{13,19}$');
+    ```
+
+    Explanation:
+    - This regex performs basic validation for credit card numbers, ensuring they have 13 to 19 digits. Note that this doesn't validate the actual credit card number using checksums.
+
  
