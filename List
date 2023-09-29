@@ -65,6 +65,23 @@ class Test {
        return f;
    } 
 }
+//update 
+void main() { 
+   StringToList c = StringToList(); 
+ List<String> v = c.test1('Ven,kates,an',',');
+  print('my name is $v');
+} 
+
+class StringToList {
+  List<String> test1(String name , String split,) {
+    var f = name.split(split);
+    return f;
+  }
+ 
+}
+
+
+
 
 //Getter seter
 void main() {
