@@ -1,0 +1,122 @@
+{
+    "code": 200,
+    "message": "Dealer definition listed successfully",
+    "data": {
+        "General": [
+            {
+                "dealerDefinitionId": 1,
+                "categoryId": 2,
+                "categoryName": "General",
+                "widgetTypeId": 1,
+                "widgetType": "TEXT",
+                "widgetDescription": "Text",
+                "parameter": "Use USA units",
+                "description": "Use USA Localization Metrics (Gallons, Inches, Pounds, etc)",
+                "dropdownValues": "Galens, Inchecs, Pounds",
+                "active": "1"
+            },
+            {
+                "dealerDefinitionId": 2,
+                "categoryId": 2,
+                "categoryName": "General",
+                "widgetTypeId": 1,
+                "widgetType": "TEXT",
+                "widgetDescription": "Text",
+                "parameter": "Water accumulation unit",
+                "description": "Water accumulation unit",
+                "dropdownValues": "m3",
+                "active": "1"
+            },
+            {
+                "dealerDefinitionId": 3,
+                "categoryId": 2,
+                "categoryName": "General",
+                "widgetTypeId": 2,
+                "widgetType": "SWITCH",
+                "widgetDescription": "Switch",
+                "parameter": "Cycles",
+                "description": "Enable repeating cycles",
+                "dropdownValues": "Yes",
+                "active": "1"
+            }
+        ],
+        "Fertilization": [
+            {
+                "dealerDefinitionId": 4,
+                "categoryId": 4,
+                "categoryName": "Fertilization",
+                "widgetTypeId": 2,
+                "widgetType": "SWITCH",
+                "widgetDescription": "Switch",
+                "parameter": "Local Fert mode Litter/m3",
+                "description": "Enable Local Fert mode  ",
+                "dropdownValues": "Yes",
+                "active": "1"
+            },
+            {
+                "dealerDefinitionId": 9,
+                "categoryId": 4,
+                "categoryName": "Fertilization",
+                "widgetTypeId": 3,
+                "widgetType": "DROPDOWN",
+                "widgetDescription": "Dropdown",
+                "parameter": "Default fert mode",
+                "description": "Default Fertigation dosage mode",
+                "dropdownValues": "None,L/m3,mm:ss/m3,sec/min,L/min,L prop,time ,L bulk",
+                "active": "1"
+            }
+        ],
+        "Valve defaults": [
+            {
+                "dealerDefinitionId": 5,
+                "categoryId": 3,
+                "categoryName": "Valve defaults",
+                "widgetTypeId": 1,
+                "widgetType": "TEXT",
+                "widgetDescription": "Text",
+                "parameter": "Default nomonal flow",
+                "description": "Default nomonal flow for all valves",
+                "dropdownValues": "100",
+                "active": "1"
+            },
+            {
+                "dealerDefinitionId": 6,
+                "categoryId": 3,
+                "categoryName": "Valve defaults",
+                "widgetTypeId": 3,
+                "widgetType": "DROPDOWN",
+                "widgetDescription": "Dropdown",
+                "parameter": "Default Dosage mode",
+                "description": "Default Dosage mode for all valves in sytem",
+                "dropdownValues": "hh:mm:ss,m3",
+                "active": "1"
+            }
+        ],
+        "Memory allocations": [
+            {
+                "dealerDefinitionId": 7,
+                "categoryId": 5,
+                "categoryName": "Memory allocations",
+                "widgetTypeId": 1,
+                "widgetType": "TEXT",
+                "widgetDescription": "Text",
+                "parameter": "Programs",
+                "description": "Total number of programs to allowed the system",
+                "dropdownValues": "100",
+                "active": "1"
+            },
+            {
+                "dealerDefinitionId": 8,
+                "categoryId": 5,
+                "categoryName": "Memory allocations",
+                "widgetTypeId": 1,
+                "widgetType": "TEXT",
+                "widgetDescription": "Text",
+                "parameter": "Groups",
+                "description": "Total number of valve in group allowed in the system",
+                "dropdownValues": "99",
+                "active": "1"
+            }
+        ]
+    }
+}
