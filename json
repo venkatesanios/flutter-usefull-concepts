@@ -1,122 +1,228 @@
-{
-    "code": 200,
-    "message": "Dealer definition listed successfully",
-    "data": {
-        "General": [
-            {
-                "dealerDefinitionId": 1,
-                "categoryId": 2,
-                "categoryName": "General",
-                "widgetTypeId": 1,
-                "widgetType": "TEXT",
-                "widgetDescription": "Text",
-                "parameter": "Use USA units",
-                "description": "Use USA Localization Metrics (Gallons, Inches, Pounds, etc)",
-                "dropdownValues": "Galens, Inchecs, Pounds",
-                "active": "1"
-            },
-            {
-                "dealerDefinitionId": 2,
-                "categoryId": 2,
-                "categoryName": "General",
-                "widgetTypeId": 1,
-                "widgetType": "TEXT",
-                "widgetDescription": "Text",
-                "parameter": "Water accumulation unit",
-                "description": "Water accumulation unit",
-                "dropdownValues": "m3",
-                "active": "1"
-            },
-            {
-                "dealerDefinitionId": 3,
-                "categoryId": 2,
-                "categoryName": "General",
-                "widgetTypeId": 2,
-                "widgetType": "SWITCH",
-                "widgetDescription": "Switch",
-                "parameter": "Cycles",
-                "description": "Enable repeating cycles",
-                "dropdownValues": "Yes",
-                "active": "1"
-            }
-        ],
-        "Fertilization": [
-            {
-                "dealerDefinitionId": 4,
-                "categoryId": 4,
-                "categoryName": "Fertilization",
-                "widgetTypeId": 2,
-                "widgetType": "SWITCH",
-                "widgetDescription": "Switch",
-                "parameter": "Local Fert mode Litter/m3",
-                "description": "Enable Local Fert mode  ",
-                "dropdownValues": "Yes",
-                "active": "1"
-            },
-            {
-                "dealerDefinitionId": 9,
-                "categoryId": 4,
-                "categoryName": "Fertilization",
-                "widgetTypeId": 3,
-                "widgetType": "DROPDOWN",
-                "widgetDescription": "Dropdown",
-                "parameter": "Default fert mode",
-                "description": "Default Fertigation dosage mode",
-                "dropdownValues": "None,L/m3,mm:ss/m3,sec/min,L/min,L prop,time ,L bulk",
-                "active": "1"
-            }
-        ],
-        "Valve defaults": [
-            {
-                "dealerDefinitionId": 5,
-                "categoryId": 3,
-                "categoryName": "Valve defaults",
-                "widgetTypeId": 1,
-                "widgetType": "TEXT",
-                "widgetDescription": "Text",
-                "parameter": "Default nomonal flow",
-                "description": "Default nomonal flow for all valves",
-                "dropdownValues": "100",
-                "active": "1"
-            },
-            {
-                "dealerDefinitionId": 6,
-                "categoryId": 3,
-                "categoryName": "Valve defaults",
-                "widgetTypeId": 3,
-                "widgetType": "DROPDOWN",
-                "widgetDescription": "Dropdown",
-                "parameter": "Default Dosage mode",
-                "description": "Default Dosage mode for all valves in sytem",
-                "dropdownValues": "hh:mm:ss,m3",
-                "active": "1"
-            }
-        ],
-        "Memory allocations": [
-            {
-                "dealerDefinitionId": 7,
-                "categoryId": 5,
-                "categoryName": "Memory allocations",
-                "widgetTypeId": 1,
-                "widgetType": "TEXT",
-                "widgetDescription": "Text",
-                "parameter": "Programs",
-                "description": "Total number of programs to allowed the system",
-                "dropdownValues": "100",
-                "active": "1"
-            },
-            {
-                "dealerDefinitionId": 8,
-                "categoryId": 5,
-                "categoryName": "Memory allocations",
-                "widgetTypeId": 1,
-                "widgetType": "TEXT",
-                "widgetDescription": "Text",
-                "parameter": "Groups",
-                "description": "Total number of valve in group allowed in the system",
-                "dropdownValues": "99",
-                "active": "1"
-            }
-        ]
-    }
+import 'package:flutter/material.dart';
+import 'package:multi_select_flutter/multi_select_flutter.dart';
+
+class Animal {
+  final int? id;
+  final String? name;
+
+  Animal({
+    this.id,
+    this.name,
+  });
+}
+
+class Multipleselection extends StatefulWidget {
+  Multipleselection({super.key, required this.title});
+
+  final String title;
+  @override
+  _MultipleselectionState createState() => _MultipleselectionState();
+}
+
+class _MultipleselectionState extends State<Multipleselection> {
+  static List<Animal> _animals = [
+    Animal(id: 1, name: "Lion"),
+    Animal(id: 2, name: "Flamingo"),
+    Animal(id: 3, name: "Hippo"),
+    Animal(id: 4, name: "Horse"),
+    Animal(id: 5, name: "Tiger"),
+    Animal(id: 6, name: "Penguin"),
+    Animal(id: 7, name: "Spider"),
+    Animal(id: 8, name: "Snake"),
+    Animal(id: 9, name: "Bear"),
+    Animal(id: 10, name: "Beaver"),
+    Animal(id: 11, name: "Cat"),
+    Animal(id: 12, name: "Fish"),
+    Animal(id: 13, name: "Rabbit"),
+    Animal(id: 14, name: "Mouse"),
+    Animal(id: 15, name: "Dog"),
+    Animal(id: 16, name: "Zebra"),
+    Animal(id: 17, name: "Cow"),
+    Animal(id: 18, name: "Frog"),
+    Animal(id: 19, name: "Blue Jay"),
+    Animal(id: 20, name: "Moose"),
+    Animal(id: 21, name: "Gecko"),
+    Animal(id: 22, name: "Kangaroo"),
+    Animal(id: 23, name: "Shark"),
+    Animal(id: 24, name: "Crocodile"),
+    Animal(id: 25, name: "Owl"),
+    Animal(id: 26, name: "Dragonfly"),
+    Animal(id: 27, name: "Dolphin"),
+  ];
+  final _items = _animals.map((animal) => MultiSelectItem<Animal>(animal, animal.name!)).toList();
+  List<Animal> _selectedAnimals = [];
+  List<Animal> _selectedAnimals2 = [];
+  List<Animal> _selectedAnimals3 = [];
+  List<Animal> _selectedAnimals4 = [];
+  List<Animal> _selectedAnimals5 = [];
+  final _multiSelectKey = GlobalKey<FormFieldState>();
+
+  @override
+  void initState() {
+    _selectedAnimals5 = _animals;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 40),
+              //################################################################################################
+              // Rounded blue MultiSelectDialogField
+              //################################################################################################
+              MultiSelectDialogField(
+                items: _items,
+                title: Text("Animals"),
+                selectedColor: Colors.blue,
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.1),
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                  border: Border.all(
+                    color: Colors.blue,
+                    width: 2,
+                  ),
+                ),
+                buttonIcon: Icon(
+                  Icons.pets,
+                  color: Colors.blue,
+                ),
+                buttonText: Text(
+                  "Favorite Animals",
+                  style: TextStyle(
+                    color: Colors.blue[800],
+                    fontSize: 16,
+                  ),
+                ),
+                onConfirm: (results) {
+                  _selectedAnimals = results;
+                },
+              ),
+              SizedBox(height: 50),
+              //################################################################################################
+              // This MultiSelectBottomSheetField has no decoration, but is instead wrapped in a Container that has
+              // decoration applied. This allows the ChipDisplay to render inside the same Container.
+              //################################################################################################
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor.withOpacity(.4),
+                  border: Border.all(
+                    color: Theme.of(context).primaryColor,
+                    width: 2,
+                  ),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    MultiSelectBottomSheetField(
+                      initialChildSize: 0.4,
+                      listType: MultiSelectListType.CHIP,
+                      searchable: true,
+                      buttonText: Text("Favorite Animals"),
+                      title: Text("Animals"),
+                      items: _items,
+                      onConfirm: (values) {
+                        _selectedAnimals2 = values as List<Animal>;
+                      },
+                      chipDisplay: MultiSelectChipDisplay(
+                        onTap: (value) {
+                          setState(() {
+                            _selectedAnimals2.remove(value);
+                          });
+                        },
+                      ),
+                    ),
+                    _selectedAnimals2 == null || _selectedAnimals2.isEmpty
+                        ? Container(
+                            padding: EdgeInsets.all(10),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "None selected",
+                              style: TextStyle(color: Colors.black54),
+                            ))
+                        : Container(),
+                  ],
+                ),
+              ),
+              SizedBox(height: 40),
+              //################################################################################################
+              // MultiSelectBottomSheetField with validators
+              //################################################################################################
+              MultiSelectBottomSheetField<Animal?>(
+                key: _multiSelectKey,
+                initialChildSize: 0.7,
+                maxChildSize: 0.95,
+                title: Text("Animals"),
+                buttonText: Text("Favorite Animals"),
+                items: _items,
+                searchable: true,
+                validator: (values) {
+                  if (values == null || values.isEmpty) {
+                    return "Required";
+                  }
+                  List<String?> names = values.map((e) => e?.name).toList();
+                  if (names.contains("Frog")) {
+                    return "Frogs are weird!";
+                  }
+                  return null;
+                },
+                onConfirm: (values) {
+                  setState(() {
+                    _selectedAnimals3 = values as List<Animal>;
+                  });
+                  _multiSelectKey.currentState?.validate();
+                },
+                chipDisplay: MultiSelectChipDisplay(
+                  onTap: (item) {
+                    setState(() {
+                      _selectedAnimals3.remove(item);
+                    });
+                    _multiSelectKey.currentState?.validate();
+                  },
+                ),
+              ),
+              SizedBox(height: 40),
+              //################################################################################################
+              // MultiSelectChipField
+              //################################################################################################
+              MultiSelectChipField<Animal?>(
+                items: _items,
+                initialValue: [_animals[4], _animals[7], _animals[9]],
+                title: Text("Animals"),
+                headerColor: Colors.blue.withOpacity(0.5),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.blue, width: 1.8),
+                ),
+                selectedChipColor: Colors.blue.withOpacity(0.5),
+                selectedTextStyle: TextStyle(color: Colors.blue[800]),
+                onTap: (values) {
+                  _selectedAnimals4 = values as List<Animal>;
+                  print(values);
+                },
+              ),
+              SizedBox(height: 40),
+              //################################################################################################
+              // MultiSelectDialogField with initial values
+              //################################################################################################
+              MultiSelectDialogField(
+                onConfirm: (val) {
+                  _selectedAnimals5 = val;
+                },
+                dialogWidth: MediaQuery.of(context).size.width * 0.7,
+                items: _items,
+                initialValue: _selectedAnimals5, // setting the value of this in initState() to pre-select values.
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
