@@ -1,5 +1,5 @@
-[
-  "{",
-  "  \"googletoken\": \"Hello, World!\"",
-  "}"
-]
+{
+    "code": 200,
+    "message": "User program selection listed successfully",
+    "data": ""
+}
