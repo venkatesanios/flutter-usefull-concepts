@@ -1,6 +1,6 @@
 {
     "code": 201,
-    "message": "User program selection listed successfully",
+    "message": "Mqtt",
     "data": {
         "irrigationPump": [],
         "mainValve": [
