@@ -1,5 +1,5 @@
 {
-    "code": 200,
+    "code": 201,
     "message": "Mqtt",
     "data":  {
    "mqttIPAddress" = "tcp://3.0.229.165:1883";
