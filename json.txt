@@ -1,5 +1,9 @@
 {
     "code": 201,
     "message": "Mqtt",
-    "data":  "null"
+    "data":  {
+   "mqttIPAddress" = "tcp://3.0.229.165:1883";
+        "mqttPassword" = "niagara@123";
+        "mqttUserName" = niagara;
+
 }
