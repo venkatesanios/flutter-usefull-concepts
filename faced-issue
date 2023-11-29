@@ -4,3 +4,19 @@ row colunm using inside container used size or Expand or flex using in flutter
 
 inside widget using if and else conditions end of if don't use ,(comma or semi colon )
 
+
+
+model into json data
+
+//_radiationSet model
+  List<Map<String, dynamic>> radiationset =
+        _radiationSet.data!.map((condition) => condition.toJson()).toList();
+    print(radiationset.runtimeType);
+ 
+ 
+     Map<String, Object> body = {
+      "userId": '15',
+      "controllerId": "1",
+      "radiationSet": radiationset,
+      "createUser": "1"
+    };
