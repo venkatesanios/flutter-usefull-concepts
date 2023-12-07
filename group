@@ -882,3 +882,79 @@ class MyApp extends StatelessWidget {
         ]
     }
 }
+
+
+
+
+
+ void selectvalvelistvalue() {
+    print('selectvalvelistvalue');
+    setState(() {
+      if (selectedgroupIndex != -1) {
+        selectedValuesList = [];
+        nameListProvider.removeAll();
+        jsondata['group']![selectedgroupIndex]['location'] == ''
+            ? selectline = -1
+            : selectline = int.parse(jsondata['group']![selectedgroupIndex]
+                    ['location']
+                .split(' ')[1]);
+        ;
+
+   groupedvalvestr = '${jsondata['group']![selectedgroupIndex]['name']}';
+
+ for (var i = 0;
+            i < jsondata['line']![selectedgroupIndex]['valve'].length;
+            i++) {
+    var sNoToMatch = jsondata['line']![selectedgroupIndex]['valve'][i]['sNo'];
+        var matchedElement = jsondata['group']![selectedgroupIndex]['valve'].firstWhere((item) => item['sNo'] == sNoToMatch, orElse: () => Map<String, Object>.from({}));
+
+    // var matchedElement =  jsondata['line']![selectedgroupIndex]['valve'].firstWhere((item) => item['sNo'] == sNoToMatch, orElse: () => {});
+    if (matchedElement.isNotEmpty) {
+     nameListProvider.addName('${i + 1},');
+    }
+  }
+
+ for (var i = 0;i < jsondata['group']![selectedgroupIndex]['valve'].length;i++)
+  {
+   selectedValuesList.add(jsondata['group']![selectedgroupIndex]['valve'][i]);
+  }
+
+        // for (var i = 0;
+        //     i < jsondata['group']![selectedgroupIndex]['valve'].length;
+        //     i++) {
+        //   groupedvalvestr =
+        //       '${jsondata['group']![selectedgroupIndex]['name']}:';
+        //   selectedValuesList
+        //       .add(jsondata['group']![selectedgroupIndex]['valve'][i]);
+        //   groupedvalvestr = jsondata['group']![selectedgroupIndex]['name'];
+        //   print(jsondata['line']![selectedgroupIndex]['valve']);
+        //   print('select');
+        //   print( jsondata['group']![selectedgroupIndex]['valve']);
+        //   // for (var j = 0;
+        //   //     j < jsondata['line']![selectedgroupIndex]['valve'].length;
+        //   //     j++) {
+        //     if (jsondata['line']![selectline]['valve'][0]['sNo'] ==
+        //         jsondata['group']![selectedgroupIndex]['valve'][i]['sNo']) {
+        //       nameListProvider.addName('${i + 1},');
+        //     }
+        //   // }
+        //   nameListProvider.updateSelectedValues(selectedValuesList);
+        // }
+      }
+    });
+     print('nameListProvider.names');
+    print(nameListProvider.names);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
