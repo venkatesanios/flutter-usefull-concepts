@@ -620,3 +620,265 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "code": 200,
+    "message": "User planning named group listed successfully",
+    "data": {
+        "line": [
+            {
+                "sNo": 140,
+                "id": "IL1",
+                "name": "Irrigation Line 1",
+                "location": "",
+                "valve": [
+                    {
+                        "sNo": 141,
+                        "id": "VL1.1",
+                        "name": "Valve 1.1",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 148,
+                        "id": "VL1.2",
+                        "name": "Valve 1.2",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 149,
+                        "id": "VL1.3",
+                        "name": "Valve 1.3",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 150,
+                        "id": "VL1.4",
+                        "name": "Valve 1.4",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 151,
+                        "id": "VL1.5",
+                        "name": "Valve 1.5",
+                        "location": "IL1"
+                    }
+                ]
+            },
+            {
+                "sNo": 142,
+                "id": "IL2",
+                "name": "Irrigation Line 2",
+                "location": "",
+                "valve": [
+                    {
+                        "sNo": 143,
+                        "id": "VL2.1",
+                        "name": "Valve 2.1",
+                        "location": "IL2"
+                    },
+                    {
+                        "sNo": 152,
+                        "id": "VL2.2",
+                        "name": "Valve 2.2",
+                        "location": "IL2"
+                    },
+                    {
+                        "sNo": 153,
+                        "id": "VL2.3",
+                        "name": "Valve 2.3",
+                        "location": "IL2"
+                    },
+                    {
+                        "sNo": 154,
+                        "id": "VL2.4",
+                        "name": "Valve 2.4",
+                        "location": "IL2"
+                    },
+                    {
+                        "sNo": 155,
+                        "id": "VL2.5",
+                        "name": "Valve 2.5",
+                        "location": "IL2"
+                    }
+                ]
+            },
+            {
+                "sNo": 144,
+                "id": "IL3",
+                "name": "Irrigation Line 3",
+                "location": "",
+                "valve": [
+                    {
+                        "sNo": 145,
+                        "id": "VL3.1",
+                        "name": "Valve 3.1",
+                        "location": "IL3"
+                    },
+                    {
+                        "sNo": 156,
+                        "id": "VL3.2",
+                        "name": "Valve 3.2",
+                        "location": "IL3"
+                    },
+                    {
+                        "sNo": 157,
+                        "id": "VL3.3",
+                        "name": "Valve 3.3",
+                        "location": "IL3"
+                    },
+                    {
+                        "sNo": 158,
+                        "id": "VL3.4",
+                        "name": "Valve 3.4",
+                        "location": "IL3"
+                    },
+                    {
+                        "sNo": 159,
+                        "id": "VL3.5",
+                        "name": "Valve 3.5",
+                        "location": "IL3"
+                    }
+                ]
+            },
+            {
+                "sNo": 146,
+                "id": "IL4",
+                "name": "Irrigation Line 4",
+                "location": "",
+                "valve": [
+                    {
+                        "sNo": 147,
+                        "id": "VL4.1",
+                        "name": "Valve 4.1",
+                        "location": "IL4"
+                    },
+                    {
+                        "sNo": 160,
+                        "id": "VL4.2",
+                        "name": "Valve 4.2",
+                        "location": "IL4"
+                    },
+                    {
+                        "sNo": 161,
+                        "id": "VL4.3",
+                        "name": "Valve 4.3",
+                        "location": "IL4"
+                    },
+                    {
+                        "sNo": 162,
+                        "id": "VL4.4",
+                        "name": "Valve 4.4",
+                        "location": "IL4"
+                    },
+                    {
+                        "sNo": 163,
+                        "id": "VL4.5",
+                        "name": "Valve 4.5",
+                        "location": "IL4"
+                    }
+                ]
+            }
+        ],
+        "group": [
+            {
+                "sNo": 1,
+                "id": "VLG1",
+                "location": "Line 1",
+                "name": "Valve Group1",
+                "valve": [
+                    {
+                        "sNo": 148,
+                        "id": "VL1.2",
+                        "name": "Valve 1.2",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 149,
+                        "id": "VL1.3",
+                        "name": "Valve 1.3",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 150,
+                        "id": "VL1.4",
+                        "name": "Valve 1.4",
+                        "location": "IL1"
+                    },
+                    {
+                        "sNo": 151,
+                        "id": "VL1.5",
+                        "name": "Valve 1.5",
+                        "location": "IL1"
+                    }
+                ]
+            },
+            {
+                "sNo": 2,
+                "id": "VLG2",
+                "location": "Line 2",
+                "name": "Valve Group2",
+                "valve": []
+            },
+            {
+                "sNo": 3,
+                "id": "VLG3",
+                "location": "Line 3",
+                "name": "Valve Group3",
+                "valve": []
+            },
+            {
+                "sNo": 4,
+                "id": "VLG4",
+                "location": "",
+                "name": "Valve Group4",
+                "valve": []
+            },
+            {
+                "sNo": 5,
+                "id": "VLG5",
+                "location": "",
+                "name": "Valve Group5",
+                "valve": []
+            },
+            {
+                "sNo": 6,
+                "id": "VLG6",
+                "location": "",
+                "name": "Valve Group6",
+                "valve": []
+            },
+            {
+                "sNo": 7,
+                "id": "VLG7",
+                "location": "",
+                "name": "Valve Group7",
+                "valve": []
+            }
+        ]
+    }
+}
