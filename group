@@ -1,9 +1,195 @@
+ import 'dart:convert';
+
+Groupedname groupednameFromJson(String str) =>
+    Groupedname.fromJson(json.decode(str));
+
+String groupednameToJson(Groupedname data) => json.encode(data.toJson());
+
+class Groupedname {
+  int? code;
+  String? message;
+  Data? data;
+
+  Groupedname({
+    this.code,
+    this.message,
+    this.data,
+  });
+
+  factory Groupedname.fromJson(Map<dynamic, dynamic> json) => Groupedname(
+        code: json["code"],
+        message: json["message"],
+        data: json["data"] == null ? null : Data.fromJson(json["data"]),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "code": code,
+        "message": message,
+        "data": data?.toJson(),
+      };
+}
+
+class Data {
+  List<Group>? line;
+  List<Group>? group;
+
+  Data({
+    this.line,
+    this.group,
+  });
+
+  factory Data.fromJson(Map<String, dynamic> json) => Data(
+        line: json["line"] == null
+            ? []
+            : List<Group>.from(json["line"]!.map((x) => Group.fromJson(x))),
+        group: json["group"] == null
+            ? []
+            : List<Group>.from(json["group"]!.map((x) => Group.fromJson(x))),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "line": line == null
+            ? []
+            : List<dynamic>.from(line!.map((x) => x.toJson())),
+        "group": group == null
+            ? []
+            : List<dynamic>.from(group!.map((x) => x.toJson())),
+      };
+}
+
+class Group {
+  int? sNo;
+  String? id;
+  String? location;
+  String? name;
+  List<Group>? valve;
+
+  Group({
+    this.sNo,
+    this.id,
+    this.location,
+    this.name,
+    this.valve,
+  });
+
+  factory Group.fromJson(Map<String, dynamic> json) => Group(
+        sNo: json["sNo"],
+        id: json["id"],
+        location: json["location"],
+        name: json["name"],
+        valve: json["valve"] == null
+            ? []
+            : List<Group>.from(json["valve"]!.map((x) => Group.fromJson(x))),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "sNo": sNo,
+        "id": id,
+        "location": location,
+        "name": name,
+        "valve": valve == null
+            ? []
+            : List<dynamic>.from(valve!.map((x) => x.toJson())),
+      };
+}
+
+import 'package:flutter/material.dart';
+import 'package:oro_irrigation_new/Models/IrrigationModel/sequence_model.dart';
+import 'package:oro_irrigation_new/screens/Customer/Group/newgroup_model.dart';
+
+class SelectedGroupProvider with ChangeNotifier {
+  String selectedGroup = '';
+    int selectedGroupsrno = 0;
+
+  Line? selectedLine;
+
+  void updateSelectedGroup(String groupName) {
+    selectedGroup = groupName;
+    notifyListeners();
+    // print('selectedGroup $selectedGroup');
+  }
+
+  void updateSelectedGroupsrno(int groupNamesrno) {
+    selectedGroupsrno = groupNamesrno;
+    notifyListeners();
+    // print('selectedGroup $selectedGroup');
+  }
+  void updateSelectedLine(Line line) {
+    selectedLine = line;
+    notifyListeners();
+  }
+
+  List<Group>? selectedValveIndices = [];
+
+  // void toggleSelectedValveIndex(int index) {
+  //   if (selectedValveIndices.contains(index)) {
+  //     selectedValveIndices.remove(index);
+  //   } else {
+  //     selectedValveIndices.add(index);
+  //   }
+  //   notifyListeners();
+  // }
+
+  void clearSelectedValves() {
+    selectedValveIndices = [];
+    notifyListeners();
+  }
+
+  Map<String, List<int>> selectedValvesMap = {};
+
+  void SelectedValve(
+      String lineId, String selectvalveid, Group group, Group selectvalve) {
+    if (group.location == lineId) {
+      for (var i = 0; i < group.valve!.length; i++) {
+        if (selectvalveid == group.valve![i].id) {
+          group.valve!.removeAt(i);
+        } else {
+          group.valve!.add(selectvalve);
+        }
+      }
+    } else {
+      group.valve = [];
+    }
+    print('group.valve:${group.valve}');
+    notifyListeners();
+  }
+
+  // Method to toggle selected valve for a particular line
+  void toggleSelectedValveIndex(String lineId, int index) {
+    if (!selectedValvesMap.containsKey(lineId)) {
+      selectedValvesMap[lineId] = [];
+    }
+
+    if (selectedValvesMap[lineId]!.contains(index)) {
+      selectedValvesMap[lineId]!.remove(index);
+    } else {
+      selectedValvesMap[lineId]!.add(index);
+    }
+    notifyListeners();
+  }
+
+  void clearSelectedValvesForLine(String lineId) {
+    selectedValvesMap.remove(lineId);
+    notifyListeners();
+  }
+
+  void clearAllSelectedValves() {
+    selectedValvesMap.clear();
+    notifyListeners();
+  }
+}
+
+
+
 import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:oro_irrigation_new/constants/snack_bar.dart';
+import 'package:oro_irrigation_new/constants/theme.dart';
 import 'package:oro_irrigation_new/screens/Customer/Group/newgroup_model.dart';
+import 'package:oro_irrigation_new/screens/Customer/Group/nwegroupProvider.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants/http_service.dart';
 import '../../../state_management/group_provider.dart';
@@ -28,6 +214,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
   List<String> grouplist = [];
   List<String> emptygrouplist = [];
   NameListProvider nameListProvider = NameListProvider();
+
   Map<dynamic, dynamic> jsondata = {};
   Groupedname _groupedname = Groupedname();
   Timer? _timer;
@@ -45,7 +232,25 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
             {"sNo": 64, "id": "VL1.1", "name": "Valve 1.1", "location": "IL1"},
             {"sNo": 73, "id": "VL1.2", "name": "Valve 1.2", "location": "IL1"},
             {"sNo": 74, "id": "VL1.3", "name": "Valve 1.3", "location": "IL1"},
-            {"sNo": 75, "id": "VL1.4", "name": "Valve 1.4", "location": "IL1"}
+            {"sNo": 75, "id": "VL1.4", "name": "Valve 1.4", "location": "IL1"},
+            {"sNo": 76, "id": "VL1.5", "name": "Valve 1.5", "location": "IL1"},
+            {"sNo": 77, "id": "VL1.6", "name": "Valve 1.6", "location": "IL1"},
+            {"sNo": 78, "id": "VL1.7", "name": "Valve 1.7", "location": "IL1"},
+            {"sNo": 79, "id": "VL1.8", "name": "Valve 1.8", "location": "IL1"},
+            {"sNo": 80, "id": "VL1.9", "name": "Valve 1.9", "location": "IL1"},
+            {
+              "sNo": 81,
+              "id": "VL1.10",
+              "name": "Valve 1.10",
+              "location": "IL1"
+            },
+            {
+              "sNo": 82,
+              "id": "VL1.11",
+              "name": "Valve 1.11",
+              "location": "IL1"
+            },
+            {"sNo": 83, "id": "VL1.12", "name": "Valve 1.12", "location": "IL1"}
           ]
         },
         {
@@ -137,6 +342,10 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
     }
   };
 
+  String selectedGroupnew = '';
+  List<Group>? groupNamesnew = [];
+  Map<String, List<int>> _selectedValvesMap = {};
+
   @override
   void initState() {
     // TODO: implement initState
@@ -145,8 +354,18 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
     _timer = Timer(Duration(milliseconds: 500), () {
       valueAssign();
       selectvalvelistvalue();
-      print('jsondataselectvalvelistvalue');
-    });
+
+      groupNamesnew = _groupedname.data?.group;
+      var groupselect =
+          Provider.of<SelectedGroupProvider>(context, listen: false);
+
+      // Set default selection to the first group if there are groups available
+      if (_groupedname.data!.group!.isNotEmpty) {
+        selectedGroupnew = groupNamesnew!.first.name!;
+        groupselect.updateSelectedGroup(groupNamesnew!.first.name!);
+      }
+
+     });
   }
 
   @override
@@ -157,20 +376,22 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
 
   Future<void> fetchData() async {
     // jsondata = jsondataj['data'];
-    Map<String, Object> body = {
-      "userId": widget.userId,
-      "controllerId": widget.controllerId
-    };
-    final response =
-        await HttpService().postRequest("getUserPlanningNamedGroup", body);
-    if (response.statusCode == 200) {
-      setState(() {
-        var jsondata1 = jsonDecode(response.body);
-        _groupedname = Groupedname.fromJson(jsondata1);
-      });
-    } else {
-      // _showSnackBar(response.body);
-    }
+    // Map<String, Object> body = {
+    //   "userId": widget.userId,
+    //   "controllerId": widget.controllerId
+    // };
+    // final response =
+    //     await HttpService().postRequest("getUserPlanningNamedGroup", body);
+    // if (response.statusCode == 200) {
+    //   setState(() {
+    //     var jsondata1 = jsonDecode(response.body);
+    //     _groupedname = Groupedname.fromJson(jsondataj);
+    //   });
+    // } else {
+    //   // _showSnackBar(response.body);
+    // }
+    jsondata = jsondataj['data'];
+    _groupedname = Groupedname.fromJson(jsondataj);
   }
 
   void valueAssign() {
@@ -191,50 +412,9 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
   }
 
   void selectvalvelistvalue() {
-    print('selectvalvelistvalue');
-    print('selectedgroupIndex $selectedgroupIndex');
-    print('selectedgroupIndex2 $selectedgroupIndex');
+ 
 
-    setState(() {
-      if (selectedgroupIndex != -1) {
-        selectedValuesList = [];
-        nameListProvider.removeAll();
-        jsondata['group']![selectedgroupIndex]['location'] == ''
-            ? selectline = -1
-            : selectline = int.parse(jsondata['group']![selectedgroupIndex]
-                    ['location']
-                .split(' ')[1]);
-        ;
-
-        groupedvalvestr = '${jsondata['group']![selectedgroupIndex]['name']}';
-        print(jsondata['line']![selectedgroupIndex]['valve'].length);
-        for (var i = 0;
-            i < jsondata['line']![selectedgroupIndex]['valve'].length;
-            i++) {
-          var sNoToMatch =
-              jsondata['line']![selectedgroupIndex]['valve'][i]['sNo'];
-          print('sNoToMatch $sNoToMatch');
-          print(
-              'sNoToMatch ${jsondata['group']![selectedgroupIndex]['valve']}');
-          var matchedElement = jsondata['group']![selectedgroupIndex]['valve']
-              .firstWhere((item) => item['sNo'] == sNoToMatch,
-                  orElse: () => Map<String, Object>.from({}));
-          print('matchedElement $matchedElement');
-          if (matchedElement.isNotEmpty) {
-            nameListProvider.addName('${i + 1},');
-          }
-        }
-        for (var i = 0;
-            i < jsondata['group']![selectedgroupIndex]['valve'].length;
-            i++) {
-          selectedValuesList
-              .add(jsondata['group']![selectedgroupIndex]['valve'][i]);
-        }
-      }
-    });
-    print('selectedValuesList $selectedValuesList');
-    print('nameListProvider.names');
-    print(nameListProvider.names);
+    
   }
 
   void _showDetailsScreen(BuildContext context) {
@@ -285,9 +465,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
   }
 
   bool colorChange(List<dynamic> selectlist, String srno) {
-    print('color change');
-    print('selectlist $selectlist');
-    print('srno $srno');
+ 
     if (selectlist.isNotEmpty) {
       for (var i = 0; i < selectlist.length; i++) {
         if (selectlist[i]['sNo'].toString() == srno) {
@@ -302,7 +480,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
 
   @override
   Widget build(BuildContext context) {
-    if (jsondata['group'] == null) {
+    if (_groupedname.data == null) {
       return Container(
         child: const Center(
             child: Text(
@@ -310,7 +488,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
           style: TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
         )),
       );
-    } else if (jsondata['group']!.isEmpty) {
+    } else if (_groupedname.data!.group!.length <= 0) {
       return Container(
         child: const Center(
             child: Text(
@@ -347,11 +525,13 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                       ),
                     )),
                 //TODO:- Group
-                groupname(context),
+                // groupname(context),
+                groupnamenew(context),
+                lineValvesshow(context),
                 const SizedBox(
                   height: 5,
                 ),
-                grouplineshow(context),
+                // grouplineshow(context),
                 //Show Lines and selection valve
               ],
             ),
@@ -398,8 +578,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                     "group": jsondata['group'],
                     "createUser": widget.userId
                   };
-                  // print(body);
-                  final response = await HttpService()
+                   final response = await HttpService()
                       .postRequest("createUserPlanningNamedGroup", body);
                   final jsonDataresponse = json.decode(response.body);
                   GlobalSnackBar.show(context, jsonDataresponse['message'],
@@ -417,6 +596,8 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
 
   @override
   Widget Addgroupvalve(BuildContext context) {
+    var groupselect = Provider.of<SelectedGroupProvider>(context, listen: true);
+
     return Container(
         // height: 50,
         width: double.infinity,
@@ -426,7 +607,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '$groupedvalvestr :',
+                    '${groupselect.selectedGroup} :',
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Chip(
@@ -442,85 +623,37 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
   }
 
   @override
-  Widget groupname(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              height: 80,
-              child: Scrollbar(
-                trackVisibility: true,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  controller: ScrollController(),
-                  itemCount: grouplist.length,
-                  itemBuilder: (context, groupIndex) {
-                    String gname =
-                        jsondata['group']![groupIndex]['name'].toString();
-                    //ClicK Group
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          groupedvalvestr = '';
-                          groupedvalvestr = '$gname';
-                          nameListProvider.removeAll();
-                          print(groupedvalvestr);
-                          selectedgroupIndex = groupIndex;
-                          selectvalvelistvalue();
-                        });
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.all(4),
-                        child: Center(
-                            child: Chip(
-                          label: Text(gname),
-                          backgroundColor: selectedgroupIndex == groupIndex
-                              ? Colors.amber
-                              : Colors.blueGrey,
-                        )),
-                      ),
-                    );
-                  },
-                ),
-              ),
-            ),
-          ),
-          // Container(width: 50,height: 100,child: ,),
-
-          Container(
-            height: 40,
-            width: 40,
-            padding: const EdgeInsets.all(2),
-            child: FloatingActionButton(
-              elevation: 4,
-              onPressed: () {
-                setState(() {
-                  //Add group list
-                  if (emptygrouplist.isNotEmpty) {
-                    print('emptygrouplist:$emptygrouplist');
-                    grouplist.add(emptygrouplist[0].toString());
-                    emptygrouplist.removeAt(0);
-                    groupedvalvestr = grouplist[0].toString();
-                    nameListProvider.removeAll();
-                    print('end:$emptygrouplist');
-                  } else {
-                    _showAlertDialog(
-                        context, 'Warning', 'Group Limit is Reached', false);
-                    print('Group Limit is Reached');
-                    GlobalSnackBar.show(context, 'Group Limit is Reached', 200);
-                  }
-                });
-
-                print('click add button');
-              },
-              child: const Icon(Icons.add),
-            ),
-          ),
-        ],
-      ),
+  Widget groupnamenew(BuildContext context) {
+    var groupselect = Provider.of<SelectedGroupProvider>(context, listen: true);
+    return Column(
+      children: [
+        Wrap(
+          children: groupNamesnew?.map((group) {
+                return Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: FilterChip(
+                    label: Text(group.name ?? ''),
+                    backgroundColor: groupselect.selectedGroup == group.name
+                        ? Colors.amber
+                        : Colors.blueGrey,
+                    selectedColor: Colors.amber,
+                    selected: selectedGroupnew == group.name,
+                    showCheckmark: false,
+                    onSelected: (isSelected) {
+                      selectedGroupnew = isSelected ? group.name ?? '' : '';
+                      groupselect.updateSelectedGroup(
+                          isSelected ? group.name ?? '' : '');
+                           groupselect.updateSelectedGroupsrno(
+                          isSelected ? group.sNo ?? 0 : 0);
+                       print(
+                          'groupselect.selectedGroup: ${groupselect.selectedGroup}');
+                    },
+                  ),
+                );
+              }).toList() ??
+              [],
+        ),
+      ],
     );
   }
 
@@ -570,12 +703,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                           return GestureDetector(
                             onTap: () {
                               setState(() {
-                                print('groupedvalvestr:$groupedvalvestr');
-                                print('selectline:$selectline');
-                                print('index:${index + 1}');
-                                print('inner index:${innerIndex}');
-                                print('vnamesrno:${vnamesrno}');
-                                print('groupedvalvestr:${groupedvalvestr}');
+                             
                                 if (groupedvalvestr != '') {
                                   if (selectline != index + 1) {
                                     selectedValuesList.clear();
@@ -586,8 +714,7 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                                   }
 
                                   int? checksrno;
-                                  print('first checksrno: $checksrno ');
-                                  if (jsondata['group'].length > 0) {
+                                   if (jsondata['group'].length > 0) {
                                     for (var i = 0;
                                         i < jsondata['group'].length;
                                         i++) {
@@ -616,20 +743,16 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                                       checksrnobool = true;
                                     }
                                   }
-                                  print('checksrno: $checksrno ');
-                                  print(
-                                      'group length: ${jsondata['group'].length} ');
+                                
                                   if (jsondata['group'].length > 0) {
-                                    print('first if');
-                                    if (checksrnobool == false) {
-                                      print('checksrno if');
-                                      print('if  checksrno == null');
+                                     if (checksrnobool == false) {
+                                     
                                       jsondata['group']![selectedgroupIndex]
                                               ['valve']
                                           .add(jsondata['line']![index]['valve']
                                               [innerIndex]);
                                     } else {
-                                      print('else');
+                                    
                                       if (jsondata['group']![selectedgroupIndex]
                                                   ['valve'] !=
                                               null &&
@@ -659,14 +782,13 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
                                       'Warnning',
                                       'Add group First then select valves in group',
                                       false);
-                                  print(
-                                      'Add group First then select valves in group');
+                                 
                                   GlobalSnackBar.show(
                                       context,
                                       'Add group First then select valves in group',
                                       200);
                                 }
-                                print('end');
+                               
                               });
                             },
                             child: Container(
@@ -701,4 +823,109 @@ class MyGroupScreenState extends State<MyGroupScreen> with ChangeNotifier {
       ),
     );
   }
+
+  @override
+  Widget lineValvesshow(BuildContext context) {
+    var groupselect = Provider.of<SelectedGroupProvider>(context, listen: true);
+
+    return Expanded(
+      child: ListView.builder(
+         itemCount: _groupedname.data!.line!.length, // Outer list item count
+        itemBuilder: (context, index) {
+          return Card(
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    //Line name
+                    width: double.infinity,
+                    child: Text(
+                      _groupedname.data!.line![index].name!,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    height: 70,
+                    child: Scrollbar(
+                      trackVisibility: true,
+                      child: ListView.builder(
+                        controller: ScrollController(),
+                        scrollDirection: Axis.horizontal,
+                        itemCount:
+                            _groupedname.data!.line![index].valve!.length ?? 0,
+                        itemBuilder: (context, innerIndex) {
+                          int vnamesrno = _groupedname
+                                  .data!.line![index].valve![innerIndex].sNo ??
+                              0;
+                          String vid =
+                              '${_groupedname.data!.line![index].valve![innerIndex].id}'
+                                  .split("VL")
+                                  .last;
+                          String valveid = _groupedname
+                                  .data!.line![index].valve![innerIndex].id ??
+                              '';
+                          String Lineid =
+                              _groupedname.data!.group![index].location ?? '';
+                          Group group = _groupedname.data!.group![groupselect.selectedGroupsrno];
+                          Group selectvalve = _groupedname
+                              .data!.line![index].valve![innerIndex];
+                          //Edit Valve selection
+                          return GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                    print('groupselect.selectedLine!.sNo!');
+                                print(groupselect.selectedGroupsrno);
+                                print(_groupedname.data!
+                                    .group![groupselect.selectedGroupsrno-1].name);
+                                // String lineId, int selectvalveid, Group group, Group selectvalve
+
+                                groupselect.SelectedValve(Lineid,valveid,group,selectvalve);
+                              });
+                            },
+                            child: Container(
+                              width: 150,
+                              margin: const EdgeInsets.all(4),
+                              child: Center(
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.blueGrey,
+                                  child: Text('$vid'),
+                                ),
+
+                                // Chip(
+                                //   backgroundColor: Colors.blueGrey,
+                                //   label: Text(
+                                //       '${_groupedname.data!.line![index].valve![innerIndex].id}'),
+                                // ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
 }
+
+
+
+      ChangeNotifierProvider(create: (context) => SelectedGroupProvider()),
+
+ 
