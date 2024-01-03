@@ -1,0 +1,39 @@
+  double _fontSize() {
+    // return MediaQuery.of(context).size.width < 600 ? 2 : 9;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = (screenWidth / 100) + 1;
+    return fontSize;
+  }
+
+
+import 'package:flutter/material.dart';
+
+class FontSizeUtils {
+  static double? fontSizeHeading(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = (screenWidth / 100) + 5;
+    // return fontSize ?? 15 ;
+    fontSize <= 7
+        ? 9
+        : fontSize > 15
+        ? 15
+        : fontSize;
+    return 15;
+  }
+
+  static double? fontSizeLabel(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = (screenWidth / 100) + 3;
+    // return fontSize ?? 11.5;
+    fontSize <= 5
+        ? 7
+        : fontSize > 14
+        ? 14
+        : fontSize;
+    return 11.5;
+  }
+}
+use fontsize     fontSize: FontSizeUtils.fontSizeHeading(context) ?? 16,
+
+
+
