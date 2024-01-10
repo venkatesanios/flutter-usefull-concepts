@@ -1,0 +1,64 @@
+ import 'package:flutter/material.dart';
+
+class FContainer extends StatefulWidget {
+  FContainer({Key? key}) : super(key: key);
+
+  @override
+  _FContainerState createState() => _FContainerState();
+}
+
+class _FContainerState extends State<FContainer> {
+  double topPos = 33;
+  double leftPos = 33;
+  double containerWidth = 400.0;
+  double containerHeight = 100.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: GestureDetector(
+        onPanUpdate: (details) {
+          setState(() {
+            leftPos += details.delta.dx;
+            topPos += details.delta.dy;
+          });
+        },
+        child: Container(
+          width: containerWidth,
+          height: containerHeight,
+          color: Colors.purple,
+          child: Stack(
+            children: [
+              Positioned(
+                left: leftPos,
+                top: topPos,
+                child: GestureDetector(
+                  onPanUpdate: (details) {
+                    setState(() {
+//                       containerWidth += details.delta.dx;
+                       containerHeight += details.delta.dy;
+                      if(  containerHeight < 10 )
+                      {
+                        containerHeight = 20;
+                      }
+                         
+                    });
+                  },
+                  
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      body: FContainer(),
+    ),
+  ));
+}
