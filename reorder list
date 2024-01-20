@@ -1,0 +1,14 @@
+ void main() {
+  List<String> weekdayList = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  // Find the index of 'Thu'
+  int indexOfThu = weekdayList.indexOf('Wed'); //0..6
+
+  // Reorder the list
+  List<String> reorderedList = [
+    ...weekdayList.sublist(indexOfThu),
+    ...weekdayList.sublist(0, indexOfThu),
+  ];
+
+  print(reorderedList); // Output: ['Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed']
+}
