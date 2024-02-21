@@ -1,0 +1,102 @@
+import 'dart:async';
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+ class BubbleAnimation extends StatefulWidget {
+  @override
+  _BubbleAnimationState createState() => _BubbleAnimationState();
+}
+
+class _BubbleAnimationState extends State<BubbleAnimation> {
+  late List<Bubble> bubbles;
+  late Timer timer;
+
+  @override
+  void initState() {
+    super.initState();
+    bubbles = List.generate(10, (index) => Bubble());
+    timer = Timer.periodic(Duration(milliseconds: 16), (timer) {
+      setState(() {
+        bubbles.forEach((bubble) => bubble.move());
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: CustomPaint(
+          painter: BubblePainter(bubbles),
+          child: Container(
+            width: 200,
+            height: 200,
+            child: Center(
+              child: Text('Data'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BubblePainter extends CustomPainter {
+  final List<Bubble> bubbles;
+
+  BubblePainter(this.bubbles);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    bubbles.forEach((bubble) {
+      final paint = Paint()..color = bubble.color;
+      canvas.drawCircle(Offset(bubble.x, bubble.y), bubble.radius, paint);
+    });
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+class Bubble {
+  double x;
+  double y;
+  double radius;
+  Color color;
+  double speedX;
+  double speedY;
+
+  Bubble()
+      : x = Random().nextDouble() * 200,
+        y = Random().nextDouble() * 200,
+        radius = Random().nextDouble() * 20 + 10,
+        color = Color.fromRGBO(
+          Random().nextInt(256),
+          Random().nextInt(256),
+          Random().nextInt(256),
+          1,
+        ),
+        speedX = Random().nextDouble() * 0.8 ,
+        speedY = Random().nextDouble() * 0.5 ;
+
+  void move() {
+    x += speedX;
+    y += speedY;
+
+    if (x < 0 || x > 200) {
+      speedX *= -1;
+    }
+    if (y < 0 || y > 200) {
+      speedY *= -1;
+    }
+  }
+}
