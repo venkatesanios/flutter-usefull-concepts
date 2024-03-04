@@ -20,3 +20,12 @@ model into json data
       "radiationSet": radiationset,
       "createUser": "1"
     };
+
+
+
+DT_TOOLCHAIN_DIR cannot be used to evaluate LIBRARY_SEARCH_PATHS, use TOOLCHAIN_DIR instead in ios old project 
+solution : remove pod and install update pods version 12.0 old is 9
+
+
+
+
