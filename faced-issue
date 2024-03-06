@@ -20,7 +20,7 @@ model into json data
       "radiationSet": radiationset,
       "createUser": "1"
     };
-
+Textformfield text can't update or reload : 1 check initail value or controller is not using ,to solve issue using texteditcontroller is using solve this issue,reason is inial value is can't change run time first time only inital value is initialized
 
 
 DT_TOOLCHAIN_DIR cannot be used to evaluate LIBRARY_SEARCH_PATHS, use TOOLCHAIN_DIR instead in ios old project 
