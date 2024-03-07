@@ -25,7 +25,7 @@ Textformfield text can't update or reload : 1 check initail value or controller 
 
 DT_TOOLCHAIN_DIR cannot be used to evaluate LIBRARY_SEARCH_PATHS, use TOOLCHAIN_DIR instead in ios old project 
 solution : remove pod and install update pods version 12.0 old is 9
+ 
 
 
-
-
+refresh dropdpwm  issue faced issue duplicate or null value  to clear and resign a Empty value sove issue fixedd
