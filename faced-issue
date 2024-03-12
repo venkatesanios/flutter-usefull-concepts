@@ -29,3 +29,54 @@ solution : remove pod and install update pods version 12.0 old is 9
 
 
 refresh dropdpwm  issue faced issue duplicate or null value  to clear and resign a Empty value sove issue fixedd
+
+
+
+
+
+
+
+
+
+
+
+
+
+//OS UPDATE & Xcode Update 
+
+Asset validation failed
+Invalid MinimumOSVersion. Apps that only support 64-bit devices must specify a deployment target of 8.0 or later. MinimumOSVersion in 'NiagaraDripIrrigation.app/Frameworks/abseil.framework' is ''. (ID: b06cc2e3-1a94-4828-a47c-c8bb819de048)
+
+  
+Asset validation failed
+Invalid Bundle. The bundle NiagaraDripIrrigation.app/Frameworks/FirebaseFirestore.framework does not support the minimum OS Version specified in the Info.plist. (ID: 0111426d-39c4-4003-8345-3b5d35a03017)
+
+Asset validation failed
+Invalid Bundle. The bundle NiagaraDripIrrigation.app/Frameworks/GoogleAppMeasurement.framework does not support the minimum OS Version specified in the Info.plist. (ID: af440995-7d73-43f2-81ce-82a1c5d9185b)
+
+Asset validation failed
+Invalid Bundle. The bundle NiagaraDripIrrigation.app/Frameworks/GoogleAppMeasurementIdentitySupport.framework does not support the minimum OS Version specified in the Info.plist. (ID: 11a8f1fd-521c-4c24-bf11-2fa4ddb9595a)
+
+Asset validation failed
+Invalid Info.plist value. The CFBundleExecutable Info.plist key contains the gRPC-C++ value in the “Payload/NiagaraDripIrrigation.app/Frameworks/gRPC-C++.framework” bundle. This key’s value can’t contain any of the following unsupported characters: \ [ ] { } ( ) + * (ID: d119dc05-f201-4c30-a903-ace30a4c900e)
+
+Asset validation failed
+Invalid Bundle. The bundle NiagaraDripIrrigation.app/Frameworks/gRPC-C++.framework does not support the minimum OS Version specified in the Info.plist. (ID: 339a3c33-3f70-4876-a2b5-d604313de8fc)
+
+Asset validation failed
+Invalid Bundle. The bundle NiagaraDripIrrigation.app/Frameworks/gRPC-Core.framework does not support the minimum OS Version specified in the Info.plist. (ID: b3f093a5-5986-43fe-85a7-9e72b9420898)
+
+mkstemp "/Users/user/Library/Developer/Xcode/DerivedData/Niagara-gxahexvtnnttumagsyaeanagzerj/Build/Products/Release-iphoneos/NiagaraDripIrrigation.app/Frameworks/BAFluidView.framework/.BAFluidView.wDrjEc" failed: Operation not permitted (1)
+rsync: mkstemp "/Users/user/Library/Developer/Xcode/DerivedData/Niagara-gxahexvtnnttumagsyaeanagzerj/Build/Products/Release-iphoneos/NiagaraDripIrrigation.app/Frameworks/BAFluidView.framework/.Info.plist.Q9LxQE" failed: Operation not permitted (1)
+
+Sol 3.Build settings user script sandboxing yes change into No
+
+SOLUTION
+
+1. Clear pods file 
+2.project format 13 to change 15 
+3.Build settings user script sandboxing yes change into No
+4. ABGaudgeview pod is remove into use GDgaudgeview
+5.add in every class for @available(iOS 13.0, *)
+
+
