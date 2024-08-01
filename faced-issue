@@ -93,6 +93,19 @@ solution :
 6.flutter run 
 7.open xcode run working correctly  
 
+Aug 1 2024
+Automatically run pod install command on "The sandbox is not in sync with the Podfile.lock" error
+change into 
+${PODS_ROOT}/Manifest.lock
+into 
+diff "${PODS_PODFILE_DIR_PATH}/Podfile.lock" "${PODS_ROOT}/Pods/Manifest.lock" > /dev/null
+
+
+'GoogleMaps/GoogleMaps.h' file not found
+/Users/user/.pub-cache/hosted/pub.dev/google_maps_flutter_ios-2.10.0/ios/Classes/GoogleMapPolylineController.h:6:9 'GoogleMaps/GoogleMaps.h' file not found
+answer
+
+
 
 
 
