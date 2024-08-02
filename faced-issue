@@ -113,3 +113,10 @@ Answer
 In Xcode project, See Build Settings -> Build Options , Set ENABLE_USER_SCRIPT_SANDBOXING to No.
 
 
+
+aug 02  
+No such module 'Flutter'
+pod install 
+
+
+
