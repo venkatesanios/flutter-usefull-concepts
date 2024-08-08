@@ -119,4 +119,7 @@ No such module 'Flutter'
 pod install 
 
 
-
+Aug 08  
+Error: Method not found: 'UnmodifiableUint8ListView'.Dart SDK 3.5.0
+Flutter SDK 3.24.0
+flutter channel stable
