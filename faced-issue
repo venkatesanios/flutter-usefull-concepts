@@ -123,3 +123,11 @@ Aug 08
 Error: Method not found: 'UnmodifiableUint8ListView'.Dart SDK 3.5.0
 Flutter SDK 3.24.0
 Answer :  flutter channel stable
+
+
+
+Xcode 14 is not getting attached to Simulator in Debug mode
+attach failed (Not allowed to attach to process. Look in the console messages (Console.app), near the debugserver entries, when the attach failed. The subsystem that denied the attach permission will likely have logged an informative message about why it was denied.)
+Answer: Product----> schema -->Edit schemes
+Build configuration: Run
+Debug executable Deselected(!) check box if selecet above issue to solve deselect
