@@ -138,3 +138,15 @@ Debug executable Deselected(!) check box if selecet above issue to solve deselec
 SHA 1 & 256 KEY cmd in terminal
 keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
 
+
+
+
+
+
+
+
+
+empty dSYM file detected, dSYM was created with an executable with no debug info.
+
+
+
