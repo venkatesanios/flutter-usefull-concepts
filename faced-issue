@@ -150,3 +150,94 @@ empty dSYM file detected, dSYM was created with an executable with no debug info
 
 
 
+dwarfdump --uuid /Users/user/Library/Developer/Xcode/Archives/2024-10-01/iLevel 01-10-24, 11.56 AM.xcarchive/dSYMs/iLevel.app.dSYM/Contents/Resources/DWARF/Flutter
+
+dwarfdump --uuid "/Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/Flutter"
+
+UUID: ADF84F4A-1582-3220-9359-E68D52DA9864 (arm64) Runner
+
+
+
+
+Last login: Tue Oct  1 12:26:51 on ttys029
+/Users/user/.zprofile:3: command not found: rbenv
+user@M1-MacBook-Air ~ % /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+zsh: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+cd: too many arguments
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner\ 01-10-24,\ 10.35\ AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+
+cd: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner\ 01-10-24,\ 10.35\ AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+
+cd: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+user@M1-MacBook-Air ~ % cd "/Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/"
+
+cd: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/Runner.app.dSYM/Contents/Resources/DWARF/
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF
+cd: too many arguments
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF
+cd: too many arguments
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner\ 01-10-24,\ 10.35\ AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF
+
+cd: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF
+user@M1-MacBook-Air ~ % cd "/Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF"
+
+cd: no such file or directory: /Users/user/Library/Developer/Xcode/Archives/2024-10-01/Runner 01-10-24, 10.35 AM.xcarchive/dSYMs/App.framework.dSYM/Contents/Resources/DWARF
+user@M1-MacBook-Air ~ % cd /Users/user/Library/Developer/Xcode/Archives/2024-10-01/
+
+user@M1-MacBook-Air 2024-10-01 % ls
+Runner 01-10-24, 10.35 AM.xcarchive	iLevel 01-10-24, 11.56 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % cd "Runner 01-10-24, 10.35 AM.xcarchive"
+cd: no such file or directory: Runner 01-10-24, 10.35 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % ls                                      
+Runner 01-10-24, 10.35 AM.xcarchive	iLevel 01-10-24, 11.56 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % cd Runner 01-10-24, 10.35 AM.xcarchive
+cd: too many arguments
+user@M1-MacBook-Air 2024-10-01 % cd Runner 01-10-24, 10.35 AM.xcarchiv 
+cd: too many arguments
+user@M1-MacBook-Air 2024-10-01 % cd Runner                             
+cd: no such file or directory: Runner
+user@M1-MacBook-Air 2024-10-01 % ls        
+Runner 01-10-24, 10.35 AM.xcarchive	iLevel 01-10-24, 11.56 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % cd Runner 01-10-24, 10.35 AM.xcarchive  
+cd: too many arguments
+user@M1-MacBook-Air 2024-10-01 % cd Runner\ 01-10-24,\ 10.35\ AM.xcarchive
+
+cd: no such file or directory: Runner 01-10-24, 10.35 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % cd "Runner 01-10-24, 10.35 AM.xcarchive"
+cd: no such file or directory: Runner 01-10-24, 10.35 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % ls -l
+
+total 0
+drwxr-xr-x@ 5 user  staff  160 Oct  1 11:31 Runner 01-10-24, 10.35 AM.xcarchive
+drwxr-xr-x@ 6 user  staff  192 Oct  1 11:58 iLevel 01-10-24, 11.56 AM.xcarchive
+user@M1-MacBook-Air 2024-10-01 % cd "Runner 01-10-24, 10.35 AM.xcarchive"
+
+user@M1-MacBook-Air Runner 01-10-24, 10.35 AM.xcarchive % 
+user@M1-MacBook-Air Runner 01-10-24, 10.35 AM.xcarchive % ls
+Info.plist	Products	dSYMs
+user@M1-MacBook-Air Runner 01-10-24, 10.35 AM.xcarchive % cd dSYMs
+user@M1-MacBook-Air dSYMs % ls
+App.framework.dSYM	Runner.app.dSYM
+user@M1-MacBook-Air dSYMs % cd Runner.app.dSYM
+user@M1-MacBook-Air Runner.app.dSYM % ls
+Contents
+user@M1-MacBook-Air Runner.app.dSYM % cd Contents
+user@M1-MacBook-Air Contents % ls
+Info.plist	Resources
+user@M1-MacBook-Air Contents % cd Resources
+user@M1-MacBook-Air Resources % ls
+DWARF		Relocations
+user@M1-MacBook-Air Resources % cd DWARF
+user@M1-MacBook-Air DWARF % ls
+Runner
+user@M1-MacBook-Air DWARF % cd Runner
+cd: not a directory: Runner
+user@M1-MacBook-Air DWARF % dwarfdump --uuid Runner
+UUID: ADF84F4A-1582-3220-9359-E68D52DA9864 (arm64) Runner
+
+
+
+
+
