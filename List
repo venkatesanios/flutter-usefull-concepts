@@ -151,3 +151,37 @@ void main() {
       
 }
 
+
+
+
+
+
+
+Summary of List Filtering and Transformation Methods:
+Method
+Description
+where
+Filters the list based on a condition and returns a new iterable.
+retainWhere
+Retains elements in the list that satisfy the condition and removes the rest (modifies the list in place).
+firstWhere
+Returns the first element that satisfies the condition, with an optional default value if no match is found.
+lastWhere
+Returns the last element that satisfies the condition, with an optional default value if no match is found.
+map
+Transforms each element in the list based on a provided function, returning a new iterable.
+expand
+Expands each element into an iterable, flattening the result into a single iterable.
+any
+Checks if any element satisfies the given condition.
+every
+Checks if every element satisfies the given condition.
+contains
+Checks if a specific element exists in the list.
+
+
+
+
+
+
+
