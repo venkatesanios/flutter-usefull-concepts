@@ -1,6 +1,18 @@
 ***
 **CamelCase:**
 
+Summary of Flutter Dart File Naming Conventions:
+
+Lowercase letters with underscores (snake_case).
+No capital letters or special characters.
+Widgets: Use descriptive names like custom_button.dart, user_card.dart.
+Models: Name files after the model, e.g., user.dart, product.dart.
+Screens: Use the term screen or page, e.g., home_screen.dart, login_screen.dart.
+Tests: Add _test to the file name, e.g., login_screen_test.dart.
+Avoid abbreviations and ensure file names are meaningful and clear.
+
+
+
 
 Summary of Naming Conventions in Flutter (Dart):
 
@@ -8,6 +20,7 @@ Summary of Naming Conventions in Flutter (Dart):
 Variable Name:   userName, isActive, totalAmount (camelCase)
 Function Name:   calculateTotal(), fetchData() (camelCase)
   Method Name:   updateName(), getDetails() (camelCase)
+   File Name :   home_screen.dart,login_screen.dart,snake_case   
 
 
 
