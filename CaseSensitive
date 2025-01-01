@@ -1,6 +1,16 @@
 ***
 **CamelCase:**
 
+
+Summary of Naming Conventions in Flutter (Dart):
+
+   Class Name:   Person, UserProfile, CarModel (PascalCase)
+Variable Name:   userName, isActive, totalAmount (camelCase)
+Function Name:   calculateTotal(), fetchData() (camelCase)
+  Method Name:   updateName(), getDetails() (camelCase)
+
+
+
 In CamelCase, the first letter of the first word is lowercase, and the first letter of each subsequent concatenated word is capitalized.
 No spaces or underscores are used between words, and each word is joined without any separator.
 Example: myVariableName, calculateTotalAmount, phoneNumber.
