@@ -237,7 +237,14 @@ cd: not a directory: Runner
 user@M1-MacBook-Air DWARF % dwarfdump --uuid Runner
 UUID: ADF84F4A-1582-3220-9359-E68D52DA9864 (arm64) Runner
 
+flutter not found :
+export PATH=/Users/user/Desktop/flutter/bin:$PATH 
 
+
+
+
+I/flutter ( 8347): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(60)] Using the Impeller rendering backend (Vulkan).
+answer is user@M1-MacBook-Air Oro %    flutter run --no-enable-impeller
 
 
 
