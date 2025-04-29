@@ -84,7 +84,7 @@ SOLUTION
 issue    : could not find included file 'Generated.xcconfig' in search paths
 solution :  
 1.Clear pods file means delete pod related ios files 
-2.again install pad init
+2.again install pod init
 3.pod install
 4.Generated.xcconfig delete that 2 line code and check for debug or release
 #include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
@@ -137,7 +137,6 @@ Debug executable Deselected(!) check box if selecet above issue to solve deselec
 
 SHA 1 & 256 KEY cmd in terminal
 keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
-
 
 
 
