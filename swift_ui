@@ -1,0 +1,11 @@
+@State: Local, simple data in a view.
+
+@Binding: Share state between parent and child view (2-way binding).
+
+@StateObject: Create and own reference data (class-based).
+
+@ObservedObject: Watch reference data (class-based) passed from another view.
+
+@EnvironmentObject: Share data across many views globally in the app.
+
+@Published tells SwiftUI to automatically update the UI
