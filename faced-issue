@@ -249,6 +249,6 @@ answer is user@M1-MacBook-Air Oro %    flutter run --no-enable-impeller
 
 Flutter Error : Module 'connectivity_plus' not found
 
-
-
+ user@M1-MacBook-Air drip % flutter doctor zsh: command not found: flutter [Process completed]
+brew install --cask flutter    
 
