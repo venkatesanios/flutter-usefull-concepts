@@ -252,3 +252,17 @@ Flutter Error : Module 'connectivity_plus' not found
  user@M1-MacBook-Air drip % flutter doctor zsh: command not found: flutter [Process completed]
 brew install --cask flutter    
 
+
+permission denaied issue:
+  i/p
+  ls -l "ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh"
+  o/p 
+-rw-r--r--  1 user  staff  3567 Jun 27 11:45 ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh
+  i/p
+user@M1-MacBook-Air drip % chmod +x "ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh"
+  i/p
+user@M1-MacBook-Air drip % ls -l "ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh"
+  o/p 
+-rwxr-xr-x  1 user  staff  3567 Jun 27 11:45 ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh
+user@M1-MacBook-Air drip % 
+
