@@ -266,3 +266,8 @@ user@M1-MacBook-Air drip % ls -l "ios/Pods/Target Support Files/GoogleMaps/Googl
 -rwxr-xr-x  1 user  staff  3567 Jun 27 11:45 ios/Pods/Target Support Files/GoogleMaps/GoogleMaps-xcframeworks.sh
 user@M1-MacBook-Air drip % 
 
+
+
+
+Check IOS deployment Target 
+grep IPHONEOS_DEPLOYMENT_TARGET ios/Pods/Pods.xcodeproj/project.pbxproj | head
